@@ -32,14 +32,14 @@ public class ArrayListMethod {
 		for (String color : colorList) {
 			System.out.println(color);
 		}
-		
-		System.out.println("Remove All...");
-		colorList.removeAll(colorList1);
-		//After Removing all remove same name also
-		System.out.println("Size after Remove all:-"+colorList.size());
-		for (String color : colorList) {
-			System.out.println(color);
-		} 
+//		
+//		System.out.println("Remove All...");
+//		colorList.removeAll(colorList1);
+//		//After Removing all remove same name also
+//		System.out.println("Size after Remove all:-"+colorList.size());
+//		for (String color : colorList) {
+//			System.out.println(color);
+//		} 
 //		System.out.println("Retain All...");
 //		colorList.retainAll(colorList1);
 //		//Same name add  with second arrayList
@@ -49,9 +49,9 @@ public class ArrayListMethod {
 //		}
 		
 		
-       //Clear-->Clear All Element In List
-		colorList.clear();
-		System.out.println(colorList);
-	}
-
-}
+//       //Clear-->Clear All Element In List
+//		colorList.clear();
+//		System.out.println(colorList);
+//	}
+        
+}}
