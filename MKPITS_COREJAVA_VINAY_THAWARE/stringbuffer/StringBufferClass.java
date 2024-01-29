@@ -18,6 +18,7 @@ public class StringBufferClass {
 		String num="1432";
 		StringBuffer nNum=new StringBuffer(num);
 		//capacity of string
+		
 		System.out.println(fDetails.capacity());
 		System.out.println(lDetails.capacity());
 		//charAt(index) to print character
@@ -56,10 +57,11 @@ public class StringBufferClass {
 	}
 	public void stringBufferConstructor() {
 		String num="142442";
-		StringBuffer num1=new StringBuffer();
-		System.out.println(5);
-		StringBuffer num2=new StringBuffer(3);
-		System.out.println(num2);
+		StringBuffer num1=new StringBuffer("Hello");
+		num1.append(" Vinay");
+		System.out.println(num1);
+		StringBuffer num2=new StringBuffer(num);
+		System.out.println(num2.capacity());
 		StringBuffer num3=new StringBuffer(num);
 		System.out.println(num3);		
 	}	
