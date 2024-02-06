@@ -1,3 +1,6 @@
 [submodule "MKPITS_COREJAVA_VINAY_THAWARE"]
 	path = MKPITS_COREJAVA_VINAY_THAWARE
 	url = https://github.com/Vinay0726/MKPITS_COREJAVA_VINAY_THAWARE.git
+[submodule "MKPITS_HTML_Vinay_Thaware"]
+	path = MKPITS_HTML_Vinay_Thaware
+	url = https://github.com/Vinay0726/MKPITS_HTML_Vinay_Thaware.git
