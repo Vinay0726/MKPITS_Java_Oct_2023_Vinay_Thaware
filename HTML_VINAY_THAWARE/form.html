@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <style>
+      body {
+        padding: 5%;
+        background-image: url(images/design-an-attractive-background-for-your-website.png);
+      }
+      .reg {
+        font-size: 50px;
+        text-align: center;
+        color: rgb(234, 149, 22);
+      }
+      .reg:hover {
+        transform: scale(1.2);
+      }
+      .container {
+        background-image: url(images/neon-light-brick-wall-room_45996-1264.jpg);
+        width: fit-content;
+        margin: auto;
+        height: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 15px;
+      }
+      #name {
+        padding: 8px;
+        margin-top: 50px;
+        width: 150px;
+        border-radius: 10px;
+      }
+      #name:hover {
+        background-color: rgb(155, 244, 177);
+        border-color: white;
+        transform: scale(1.1);
+      }
+      #btn {
+        padding: 10px;
+        background-color: rgb(46, 153, 246);
+        color: whitesmoke;
+        border-radius: 15%;
+        margin-top: 30px;
+        margin-left: 170px;
+        width: 90px;
+      }
+
+      #btn:hover {
+        background-color: crimson;
+        border-color: aqua;
+        transform: scale(1.1);
+      }
+
+      #btnm {
+        padding: 10px;
+        background-color: rgb(46, 153, 246);
+        color: whitesmoke;
+        border-radius: 15%;
+        margin-top: 30px;
+        margin-left: 5px;
+        width: 90px;
+      }
+      #btnm:hover {
+        background-color: coral;
+        border-color: aqua;
+        transform: scale(1.1);
+      }
+      #text {
+        color: aliceblue;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="reg">Registration Form</h1>
+    <div class="container">
+      <form>
+        <label id="text">FirstName</label>
+        &nbsp;<input
+          type="text"
+          id="name"
+          placeholder="Enter Your First Name"
+        />
+        <label id="text">LastName</label>
+        &nbsp;
+        <input type="text" id="name" placeholder="Enter Your Last Name" /><br />
+        <label id="text">Gender</label>
+        &nbsp; &nbsp; &nbsp;
+        <input type="radio" id="ra" />
+        <label id="text">Male</label>
+        <input type="radio" id="ra" />
+        <label id="text">Female</label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <label id="text">
+          Age &nbsp;
+          <input
+            type="number"
+            id="name"
+            accept="3"
+            value="o"
+            placeholder="Enter Age" /><br
+        /></label>
+        <label id="text">City</label>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+
+        <select id="name">
+          <option>Nagpur</option>
+          <option>Mumbai</option>
+          <option>Pune</option>
+          <option>Delhi</option>
+        </select>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label id="text">State</label>
+        <select id="name">
+          <option>Maharashtra</option>
+          <option>Karnataka</option>
+          <option>Gujarat</option>
+          <option>Delhi</option>
+        </select>
+        <br />
+
+        <label id="text">Mobile</label> &nbsp; &nbsp;
+        <input type="number" id="name" placeholder="Enter Mobile Number" />
+        &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <label id="text">Email</label>&nbsp;
+        <input type="email" id="name" placeholder="Enter Email" />
+        <br />
+        <label id="text">Password</label>
+        <input type="password" id="name" placeholder="Enter Password" />
+        <label id="text">Confirm Pass</label>
+        <input type="password" id="name" placeholder="Enter Confirm Password" />
+        <br />
+        <input type="submit" value="Create" id="btn" />
+        <input type="submit" value="login" id="btnm" />
+      </form>
+    </div>
+  </body>
+</html>
