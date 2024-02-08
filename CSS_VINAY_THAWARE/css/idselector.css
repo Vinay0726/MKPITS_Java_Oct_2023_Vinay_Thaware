@@ -1,0 +1,17 @@
+#par1 {
+  color: rgb(214, 131, 16);
+  border: rgb(18, 228, 74) solid;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+#par2 {
+  color: blue;
+  border: black solid;
+  /* font-family: "Times New Roman", Times, serif; */
+  font-weight: bold;
+}
+#par3 {
+  color: brown;
+  border: rgb(228, 141, 26) solid;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
