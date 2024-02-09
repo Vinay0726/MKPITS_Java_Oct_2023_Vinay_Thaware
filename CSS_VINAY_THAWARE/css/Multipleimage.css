@@ -1,0 +1,4 @@
+body {
+  background: url(/image/bike.jpg) no-repeat,
+    url(/image/car.jpg) right top no-repeat;
+}

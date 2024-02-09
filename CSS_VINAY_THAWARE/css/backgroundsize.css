@@ -1,0 +1,18 @@
+* {
+  background-color: aqua;
+  background-image: url(/image/car.jpg);
+  /* background-repeat: repeat-x;
+  background-repeat: repeat-y; */
+  /* Repeat->Automatically background repeat thats why we use repeat */
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-attachment: scroll;
+
+  /* size->It is use to stretch thr img */
+  /* contain->possible stretch not pixel blur */
+  /* cover->stretch all with pixel blur */
+  background-size: contain;
+  /* background-size: cover; */
+}

@@ -1,0 +1,12 @@
+* {
+  background-color: aqua;
+  background-image: url(/image/car.jpg);
+
+  background-repeat: no-repeat;
+
+  background-position: top center;
+  /* background-position: top right;
+  background-position: top left;
+  background-position: center center;
+  background-position: center buttom; */
+}

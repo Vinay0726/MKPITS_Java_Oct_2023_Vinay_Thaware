@@ -1,0 +1,10 @@
+* {
+  background-color: rgb(213, 221, 187);
+  background-image: url(/image/car.jpg);
+  background-repeat: no-repeat;
+
+  background-position: top center;
+  /* attachment is use for fixed or scroll */
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+}
