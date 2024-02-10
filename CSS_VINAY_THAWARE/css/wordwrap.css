@@ -1,0 +1,8 @@
+div {
+  color: blue;
+  width: 250px;
+  border: 1px solid black;
+  /* wordwrap->if having long word with width then it will next line */
+  word-wrap: normal;
+  word-wrap: break-word;
+}

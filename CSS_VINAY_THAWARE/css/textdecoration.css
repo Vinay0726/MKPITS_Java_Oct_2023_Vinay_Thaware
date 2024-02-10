@@ -1,0 +1,10 @@
+.txt {
+  color: blueviolet;
+  text-decoration: underline;
+  /* overline->it will top of letter */
+  text-decoration: overline;
+  /* line through->center of the letter */
+  text-decoration: line-through;
+
+  text-decoration-color: rgb(204, 79, 25);
+}

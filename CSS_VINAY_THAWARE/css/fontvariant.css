@@ -1,0 +1,5 @@
+.txt {
+  font-variant: normal;
+  /* small cap->all word capital */
+  font-variant: small-caps;
+}

@@ -1,0 +1,7 @@
+.txt {
+  color: blue;
+  /* capitalize->first letter capital */
+  text-transform: capitalize;
+  text-transform: lowercase;
+  text-transform: uppercase;
+}

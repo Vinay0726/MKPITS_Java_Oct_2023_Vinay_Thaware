@@ -1,0 +1,12 @@
+ul {
+  /* list-style-image: linear-gradient(to right, rgb(30, 255, 0), rgb(241, 133, 209)); */
+  list-style-image: url(/image/icons8-close.gif);
+}
+div {
+  margin-left: 100px;
+}
+h1 {
+  color: brown;
+  font-style: italic;
+  text-indent: 100px;
+}

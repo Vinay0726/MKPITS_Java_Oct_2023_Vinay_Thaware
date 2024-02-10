@@ -1,0 +1,12 @@
+p {
+  color: cadetblue;
+  white-space: normal;
+  white-space: inherit;
+  white-space: initial;
+  /* pre->if we have space then as it is  */
+  white-space: pre;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  /*no wrap in one line */
+  white-space: nowrap;
+}

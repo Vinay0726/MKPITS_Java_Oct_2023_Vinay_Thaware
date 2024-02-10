@@ -1,0 +1,10 @@
+.txt {
+  color: blue;
+  font-size: larger;
+  font-size: small;
+  font-size: x-large;
+  font-size: xx-small;
+  /* % px ex em */
+  /* em->16px rem->32px inch->96px */
+  font-size: 20px;
+}

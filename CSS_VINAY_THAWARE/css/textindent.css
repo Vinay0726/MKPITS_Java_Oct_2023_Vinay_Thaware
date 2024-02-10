@@ -1,0 +1,6 @@
+.txt {
+  color: blueviolet;
+
+  /* indent ->spaced before first line .indent only first line */
+  text-indent: 50px;
+}

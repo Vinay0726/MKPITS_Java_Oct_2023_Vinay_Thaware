@@ -1,0 +1,13 @@
+.txt {
+  color: blueviolet;
+}
+sup {
+  vertical-align: super;
+  vertical-align: sub;
+  vertical-align: text-top;
+  vertical-align: text-bottom;
+  vertical-align: baseline;
+  vertical-align: bottom;
+  vertical-align: top;
+  vertical-align: middle;
+}

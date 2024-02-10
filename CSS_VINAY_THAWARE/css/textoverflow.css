@@ -1,0 +1,10 @@
+p {
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+
+  text-overflow: clip;
+  /* elipsos-> it use for read more ..... */
+  text-overflow: ellipsis;
+  border: 1px solid #000000;
+}

@@ -1,0 +1,5 @@
+.txt {
+  color: rgb(227, 99, 15);
+  /* horizontal vertical blur color */
+  text-shadow: 3px 3px 3px rgb(213, 109, 30);
+}
