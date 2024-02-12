@@ -1,0 +1,13 @@
+h1{
+    border-style: dashed;
+    border-style: double;
+    border-style: dotted;
+    border-style: groove;
+    border-style: solid;
+    /* top right buttom left */
+    border-style: solid dotted double dashed;
+    /* top rightleft buttom */
+    border-style: solid dotted dashed;
+    /* topbuttom rightleft */
+    border-style: solid dashed;
+}

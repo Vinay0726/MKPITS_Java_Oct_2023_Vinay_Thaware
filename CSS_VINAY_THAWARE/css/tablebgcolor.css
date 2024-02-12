@@ -1,0 +1,17 @@
+table {
+  border: solid 2px;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 10px;
+}
+th,
+td {
+  color: blue;
+  border: solid 2px;
+  padding: 5px;
+  background-color: azure;
+  border-radius: 10px;
+}
+caption {
+  color: brown;
+}

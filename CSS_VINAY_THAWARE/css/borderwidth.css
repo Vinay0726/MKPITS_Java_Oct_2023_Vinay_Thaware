@@ -1,0 +1,13 @@
+h1 {
+     /* top right buttom left */
+    border-width: thick medium thin 5px;
+   /* top rightleft buttom */
+   border-width: thick medium 5px; 
+   /* topbuttom rightleft */
+   border-width: thick thin;
+  border-style: solid;
+  border-width: thick;
+  border-width: thin;
+  border-width: medium;
+  border-width: 5px;
+}

@@ -1,0 +1,7 @@
+table,
+th,
+td {
+  border: solid 2px;
+  /* horizontal vertical */
+  border-spacing: 5px 10px;
+}

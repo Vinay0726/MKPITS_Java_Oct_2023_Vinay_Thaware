@@ -1,0 +1,14 @@
+ul {
+  list-style-type: square;
+  list-style-type: decimal;
+  list-style-type: disc;
+  list-style-type: circle;
+}
+div {
+  margin-left: 100px;
+}
+h1 {
+  color: brown;
+  font-style: italic;
+  text-indent: 100px;
+}

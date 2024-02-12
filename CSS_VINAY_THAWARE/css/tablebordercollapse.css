@@ -1,0 +1,9 @@
+table,
+th,
+td {
+  border: solid 2px;
+  /* By Default Seperate */
+  border-collapse: separate;
+  /* collapse ->not seperate all are one */
+  border-collapse:collapse ;
+}

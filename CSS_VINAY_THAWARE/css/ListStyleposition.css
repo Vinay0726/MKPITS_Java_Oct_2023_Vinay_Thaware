@@ -1,0 +1,18 @@
+ul {
+  
+  list-style-image: linear-gradient(120deg, red, yellow);
+  list-style-position: inside;
+  list-style-position: outside;
+}
+li{
+  border: 1px solid rgb(15, 13, 13);
+  
+}
+div {
+  margin-left: 100px;
+}
+h1 {
+  color: brown;
+  font-style: italic;
+  text-indent: 100px;
+}

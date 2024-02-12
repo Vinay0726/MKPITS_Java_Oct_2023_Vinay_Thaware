@@ -1,0 +1,10 @@
+table,
+th,
+td {
+  border: solid 2px;
+}
+caption {
+  /* by default top */
+  caption-side: top;
+  caption-side: bottom;
+}
