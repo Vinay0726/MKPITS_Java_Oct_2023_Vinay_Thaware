@@ -1,0 +1,19 @@
+div{
+    position: fixed;
+    height: 400px;
+    width: 300px;
+    background-color: burlywood;
+}
+img{
+    position: relative;
+    top: 30px;
+    
+}
+p{
+    position: relative;
+    top: 100px;
+	z-index: -1;
+	color: blue;
+    
+}
+

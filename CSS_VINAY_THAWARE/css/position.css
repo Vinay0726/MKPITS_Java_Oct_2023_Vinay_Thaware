@@ -1,0 +1,22 @@
+div{
+    /* Static positioned elements are not affected by the top, bottom, left, and right properties. */
+    position: static;
+
+    /* fixed the element if we scroll it will use top left right buttom */
+    position: fixed;
+
+    /* Relative-> positioned relative to its normal position  it use left right buttom top*/
+    position: relative;
+
+    /* absolute-> is positioned relative to the nearest positioned ancestor */
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    float: center;
+    color: brown;
+    
+}
+h1{
+    position: absolute;
+    left: 30px;
+}

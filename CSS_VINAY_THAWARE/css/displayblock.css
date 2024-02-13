@@ -1,0 +1,11 @@
+.container {
+
+    /* block it take a entire screen and break a new line */
+    /* next div will be next line */
+  display: block;
+}
+div {
+  border: 1px solid;
+  background-color: aqua;
+  height: 100px;
+}

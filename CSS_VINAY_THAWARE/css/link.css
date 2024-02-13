@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  border: 1px solid;
+}
+/* link->normal unvisited link */
+/* a:link{
+    color: aqua;
+} */
+/* visited ->user after visited the link */ */
+a:visited{
+ color: aqua;
+}
+/* active the movement it is click */
+/* a:active {
+  color: antiquewhite;
+  background-color: aquamarine;
+} */

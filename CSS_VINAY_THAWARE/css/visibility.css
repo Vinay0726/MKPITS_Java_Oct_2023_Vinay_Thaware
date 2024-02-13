@@ -1,0 +1,15 @@
+.container {
+  display: inline-block;
+}
+/* inline block->it takes as much want width then next line */
+div {
+  border: 1px solid;
+  background-color: aqua;
+  
+}
+
+/* visibility->hidden to hide */
+/* collapse for table */
+h2{
+    visibility: hidden;
+}

@@ -1,0 +1,22 @@
+ #img1{
+    float: left;
+    height: 400px;
+    width: 400px;
+ }
+h1{ 
+    text-align: center;
+    padding-top: 80px;
+    position: fixed;
+    margin-left: 40%;
+}
+ #img2{
+    float: right;
+     height: 400px;
+    width: 400px;
+ }
+/* clear:both->after element after image left space not get  */
+ p{
+   padding-top: 10px;
+   clear: both;
+
+ }

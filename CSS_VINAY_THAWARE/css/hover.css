@@ -1,0 +1,10 @@
+a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid;
+}
+/* hover->when a user mouse hover it */
+a:hover{
+    color: brown;
+    background-color: antiquewhite;
+}

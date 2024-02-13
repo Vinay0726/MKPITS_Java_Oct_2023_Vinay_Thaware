@@ -1,0 +1,22 @@
+div {
+  background-color: black;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  border: 10px solid goldenrod;
+  margin-top: 10px;
+}
+
+img {
+  position: absolute;
+  left: 510px;
+  top: 100px;
+  right: none;
+  border: 10px solid rgb(113, 243, 53);
+  border-radius: 50%;
+  
+}
+img:hover{
+    transform: scale(1.1);
+}
+
