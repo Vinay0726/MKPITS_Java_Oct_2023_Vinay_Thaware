@@ -1,19 +1,18 @@
-div{
-    position: fixed;
-    height: 400px;
-    width: 300px;
-    background-color: burlywood;
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /* -1->behind the 0 element */
+  z-index: -1;
+  height: 100px;
 }
-img{
-    position: relative;
-    top: 30px;
-    
+p {
+  /* 1->forward the 0 element */
+  z-index: 1;
 }
-p{
-    position: relative;
-    top: 100px;
-	z-index: -1;
-	color: blue;
-    
+#img2 {
+  top: 20px;
+  left: 60px;
+  /* 2->forward the 1 element */
+  z-index: 2;
 }
-

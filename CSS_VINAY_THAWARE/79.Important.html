@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Important</title>
+    <style>
+      #main .p1 {
+        color: blue;
+      }
+      p {
+        /* Important->It will get Priority First */
+        color: brown !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <p class="p1">This is paragraph</p>
+    </div>
+  </body>
+</html>

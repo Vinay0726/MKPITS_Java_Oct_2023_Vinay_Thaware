@@ -1,0 +1,88 @@
+body {
+        background-color: rgb(226, 228, 231);
+        margin: 0%;
+      }
+      .container {
+        background-color: rgb(256, 256, 256);
+        padding-top: 10px;
+        padding-left: 0px;
+      }
+      .head {
+        display: flex;
+        
+      }
+
+      .search {
+        background-color: rgb(214, 227, 233);
+        border-radius: 4px;
+        width: 740px;
+        height: 50px;
+        display: flex;
+        position: relative;
+        left: 50px;
+        bottom: 5px;
+      }
+      input {
+        position: relative;
+        top: 10px;
+        width: 650px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        background-color: rgb(214, 227, 233);
+      }
+      #imgsearch {
+        padding: 15px 15px 15px 15px;
+      }
+      .cart{
+        display: flex;
+        position: relative;
+        left: 60px;
+        padding-left: 10px;
+      }
+      #login{
+        height: 24px;
+        width: 24px;
+        padding: 10px 10px 10px 10px;
+      }
+      span,#arrow{
+        position: relative;
+        bottom: 15px;
+        right: 5px;
+
+      }
+      #cart,#store,#dot{
+         padding: 10px 10px 10px 10px;
+         
+      }
+      figcaption{
+        text-align: center;
+        font-weight: bold;
+        
+      }
+
+      .category{
+        background-color: rgb(256, 266, 256);
+        margin-top: 5px;
+        height: 140px;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+      }
+      .imgcat{
+        position: relative;
+        right: 20px;
+        display: flex;
+        margin-right: 10px;
+      }
+      .sp{
+        padding-top: 30px;
+        padding-left: 5px;
+        padding-right: 23px;
+      }
+
+      .slider{
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }

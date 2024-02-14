@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Flipkart Clone</title>
+    <style>
+      body {
+        background-color: rgb(226, 228, 231);
+        margin: 0%;
+      }
+      .container {
+        background-color: rgb(256, 256, 256);
+        padding-top: 10px;
+        padding-left: 0px;
+      }
+      .head {
+        display: flex;
+        
+      }
+
+      .search {
+        background-color: rgb(241, 244, 248);
+        border-radius: 5px;
+        width: 740px;
+        height: 50px;
+        display: flex;
+        position: relative;
+        left: 50px;
+        bottom: 5px;
+      }
+      input {
+        position: relative;
+        top: 10px;
+        width: 650px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        background-color:rgb(241, 244, 248);
+      }
+      #imgsearch {
+        padding: 15px 15px 15px 15px;
+      }
+      .cart{
+        display: flex;
+        position: relative;
+        left: 60px;
+        padding-left: 10px;
+      }
+      #login{
+        height: 24px;
+        width: 24px;
+        padding: 10px 10px 10px 10px;
+      }
+      span,#arrow{
+        position: relative;
+        bottom: 15px;
+        right: 5px;
+
+      }
+      #cart,#store{
+         padding: 10px 10px 10px 10px;
+         
+      }
+      .cartmain{
+        display: flex;
+        padding-left: 80px;
+        gap: 20px;
+      }
+
+      #dot{
+        padding: 10px 10px 10px 10px;
+      }
+      figcaption{
+        text-align: center;
+        font-weight: bold;
+        
+      }
+
+      .category{
+        background-color: rgb(256, 266, 256);
+        margin-top: 5px;
+        height: 140px;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+      }
+      .imgcat{
+        position: relative;
+        right: 20px;
+        display: flex;
+        margin-right: 10px;
+      }
+      .sp{
+        padding-top: 30px;
+        padding-left: 5px;
+        padding-right: 23px;
+      }
+
+      .slider{
+        margin-top: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 260px;
+        background-image: url(image/slider1.webp);
+        background-color: rgb(82, 164, 164);
+        animation: slider 15s  ease-in-out infinite;
+      }
+      
+      @keyframes slider {
+        
+         50%{
+          background-image: url(image/slider2.webp);
+        }
+         75%{
+          background-image: url(image/slider3.webp);
+        }
+         100%{
+          background-image: url(image/slider4.webp);
+        }
+        
+      }
+      
+
+    </style>
+  </head>
+
+  <body>
+    <!-- For Nav Bar -->
+    <div class="container">
+      <header>
+        <div class="head">
+          <div>
+            <img id="sliderimg"   src="image/flipkartLogo.svg" alt="" />
+          </div>
+          <div class="search">
+            <div>
+              <img id="imgsearch" src="image/search.png" alt="imge not found" />
+            </div>
+            <div>
+              <input
+                type="search"
+                placeholder="Search For Products,Brands and More"
+              />
+            </div>
+          </div>
+            
+          <div class="cartmain">
+               <div>
+                <img id="login" src="image/login.png" type="" alt="" />
+                <span>Login</span>
+                <img  id="arrow"  src="image/icons8-expand-arrow-12.png" alt="">
+                
+                </div>
+                <div><img id="cart"   src="image/cart.png" alt="" /></div>
+                <span class="sp">Cart</span>
+                <div><img id="store"   src="image/icons8-store-24.png" alt="" /></div>
+                <span class="sp">Become a Seller</span>
+                <div><img id="dot"   src="image/icons8-three-dots-24.png" alt="" /></div>
+             </div>
+        </div>
+      </header>
+    </div>
+    <!-- End NavBar -->
+
+    <!-- Category Section -->
+<div class="category">
+    <div class="catbox">
+         <div class="imgcat">
+            <figure>
+            <img src="image/glosery.webp" alt="">
+            <figcaption>Grocery</figcaption>
+            </figure>
+            <figure>
+            <img src="image/mobilewebp.webp" alt="">
+            <figcaption>Mobile</figcaption>
+            </figure>
+            <figure>
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt="">
+            <figcaption>Fasion</figcaption>
+            </figure>
+            <figure>
+            <img src="https://rukminim1.flixcart.com/flap/80/80/image/69c6589653afdb9a.png?q=100" alt="">
+            <figcaption>Electronics</figcaption>
+            </figure>
+            <figure>
+            <img src="https://rukminim1.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100" alt="">
+            <figcaption>Home & Furniture</figcaption>
+            </figure>
+            <figure>
+            <img src="image/appliances.webp" alt="">
+            <figcaption>Appliances</figcaption>
+            </figure><figure>
+            <img src="image/travelwebp.webp" alt="">
+            <figcaption>Travel</figcaption>
+            </figure>
+            <figure>
+            <img src="	https://rukminim1.flixcart.com/flap/80/80/image/dff3f7adcf3a90c6.png?q=100" alt="">
+            <figcaption>Beauty,Toy & More</figcaption>
+            </figure>
+            <figure>
+            <img src="	https://rukminim1.flixcart.com/fk-p-flap/80/80/image/05d708653beff580.png?q=100" height="60%" alt="">
+            <figcaption>Two Wheelers</figcaption>
+            </figure>
+
+        </div>
+    
+</div>
+</div>
+    
+<div class="slider">
+  
+</div>
+
+<!-- category end -->
+
+
+
+
+
+
+  </body>
+</html>
