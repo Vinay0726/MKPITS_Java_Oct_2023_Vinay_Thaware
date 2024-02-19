@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="shortcut icon" href="image/faviconlogo.png" type="image/x-icon">
     <title>Flipkart Clone</title>
     <style>
       body {
@@ -14,10 +14,10 @@
         background-color: rgb(256, 256, 256);
         padding-top: 10px;
         padding-left: 0px;
+        width: 100%;
       }
       .head {
         display: flex;
-        
       }
 
       .search {
@@ -37,106 +37,735 @@
         height: 30px;
         border: none;
         border-radius: 3px;
-        background-color:rgb(241, 244, 248);
+        background-color: rgb(241, 244, 248);
+        outline: none;
       }
       #imgsearch {
         padding: 15px 15px 15px 15px;
       }
-      .cart{
+      .cart {
         display: flex;
         position: relative;
         left: 60px;
         padding-left: 10px;
       }
-      #login{
+      #login {
         height: 24px;
         width: 24px;
         padding: 10px 10px 10px 10px;
-      }
-      span,#arrow{
-        position: relative;
-        bottom: 15px;
-        right: 5px;
-
-      }
-      #cart,#store{
-         padding: 10px 10px 10px 10px;
-         
-      }
-      .cartmain{
-        display: flex;
-        padding-left: 80px;
-        gap: 20px;
+       
       }
 
-      #dot{
-        padding: 10px 10px 10px 10px;
+      #login:hover{
+         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
       }
-      figcaption{
-        text-align: center;
-        font-weight: bold;
+
+      .log:hover {
+        background-color: rgba(23, 23, 242, 0.934);
+        color: aliceblue;
+        border-radius: 10px;
+        margin-bottom: 12px;
         
       }
 
-      .category{
+      .logi{
+        height: 320px;
+        width: 280px;
+        background-color:white;
+        position: absolute;
+        z-index: 2;
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         display: none;
+      }
+      .log:hover .logi{
+        display: block;
+        color: black;
+      }
+
+      .log li:hover{
+        background-color: rgb(249, 244, 244);
+        height: 30px;
+        width: 240px;
+      }
+
+      
+
+   
+      span,
+      #arrow {
+        position: relative;
+        bottom: 15px;
+        right: 5px;
+        
+        
+      }
+      #arrow:hover{
+        transition: ease;
+        transform: rotate(-180deg);
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        
+        
+      }
+
+      .loginhover{
+        height: 200px;
+        position: absolute;
+        z-index: 2;
+        background-color: aquamarine;
+      }
+      
+      #cart,
+      #store {
+        padding: 10px 10px 10px 10px;
+      }
+      .cartmain {
+        display: flex;
+        padding-left: 80px;
+        gap: 10px;
+      }
+
+      #dot {
+        padding: 10px 10px 10px 10px;
+      }
+
+      .dothover{
+        height: 160px; width: 210px; background-color: white; position: absolute; z-index: 2;
+        margin-left: -150px;
+        margin-top: -5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        display: none;
+      }
+
+      .dothover ul li{
+        padding: 7px 5px;
+        text-wrap: nowrap;
+      }
+       .dothover ul li:hover{
+        background-color: rgba(244, 236, 236, 0.719);
+      }
+      .dothover ul img{
+        margin-left: -30px;
+        margin-right: 10px;
+      }
+     
+      .dothover1:hover .dothover{
+        display: block;
+        
+      }
+      figcaption {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      
+      figcaption img:hover{
+      transform: rotate(-180deg);
+
+      /* for fasion */
+      }
+      .fas{
+        position: absolute;
+        z-index: 1;
+        height: 590px;
+        width: 250px;
+        background-color: white;
+        margin-top: 15px;
+        margin-left: -210px;
+        border: 1px solid black;
+        display: none;
+      }
+      .fas1{
+        position: absolute;
+        z-index: 2;
+        height: 600px;
+        width: 250px;
+        background-color: white;
+        margin-left: 40px;
+        margin-top: 15px;
+        border: 1px solid black;
+       display: none;
+      }
+
+      
+      .fashover:hover .fas{
+        display: block;
+
+      }
+      .fashover:hover .fas1{
+        display: block;
+
+      }
+      .fasul{
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 30px;
+      }
+      .fasul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+
+      .fas1 .fasul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+      .fasul li:hover{
+        background-color: rgb(224, 224, 230);
+        border: 1px solid black;
+        height: 50px;
+        width: 100%;
+        
+        font-weight: bold;
+      }
+
+      #arrowright{
+        float: right;
+        margin-right: 20px;
+      }
+
+
+      /* for Electronics */
+     
+      .ele{
+        position: absolute;
+        z-index: 1;
+        height: 590px;
+        width: 250px;
+        background-color: white;
+        margin-top: 27px;
+        margin-left: -210px;
+        border: 1px solid black;
+        display: none;
+       
+      }
+      .ele1{
+        position: absolute;
+        z-index: 2;
+        height: 600px;
+        width: 250px;
+        background-color: white;
+        margin-left: 40px;
+        margin-top: 26px;
+        border: 1px solid black;
+        display: none;
+      
+      }
+
+      .elehover:hover .ele{
+        display: block;
+      }
+      .elehover:hover .ele1{
+        display: block;
+      }
+     
+      .eleul{
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 30px;
+      }
+      .eleul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+
+      .ele1 .eleul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+      .eleul li:hover{
+        background-color: rgb(224, 224, 230);
+        border: 1px solid black;
+        height: 50px;
+        width: 100%;
+        
+        font-weight: bold;
+      }
+    
+
+
+      /* for Home & Furniture */
+    
+       .home{
+        position: absolute;
+        z-index: 1;
+        height: 590px;
+        width: 250px;
+        background-color: white;
+        margin-top: 17px;
+        margin-left: -210px;
+        border: 1px solid black;
+        display: none;
+       
+      }
+      .home1{
+        position: absolute;
+        z-index: 2;
+        height: 600px;
+        width: 250px;
+        background-color: white;
+        margin-left: 40px;
+        margin-top: 17px;
+        border: 1px solid black;
+        display: none;
+      
+      }
+
+
+      .homehover:hover .home{
+        display: block;
+      }
+      .homehover:hover .home1{
+        display: block;
+      }
+
+     .homeul{
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 30px;
+      }
+      .homeul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+
+      .home1 .homeul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+      .homeul li:hover{
+        background-color: rgb(224, 224, 230);
+        border: 1px solid black;
+        height: 50px;
+        width: 100%;
+        
+        font-weight: bold;
+      }
+
+
+      /* for Beauty */
+
+       .beauty{
+        position: absolute;
+        z-index: 1;
+        height: 590px;
+        width: 250px;
+        background-color: white;
+        margin-top: 5px;
+        margin-left: -210px;
+        border: 1px solid black;
+        display: none;
+       
+      }
+      .beauty1{
+        position: absolute;
+        z-index: 2;
+        height: 600px;
+        width: 250px;
+        background-color: white;
+        margin-left: 40px;
+        margin-top: 5px;
+        border: 1px solid black;
+        display: none;
+      
+      }
+       .beautyhover:hover .beauty{
+        display: block;
+      }
+      .beautyhover:hover .beauty1{
+        display: block;
+      }
+     
+
+       .beautyul{
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 30px;
+      }
+      .beautyul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+
+      .beauty1 .beautyul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+      .beautyul li:hover{
+        background-color: rgb(224, 224, 230);
+        border: 1px solid black;
+        height: 50px;
+        width: 100%;
+        
+        font-weight: bold;
+      }
+
+
+      /* for Two wheeler */
+     
+       .wheeler{
+        position: absolute;
+        z-index: 1;
+        height: 120px;
+        width: 220px;
+        background-color: white;
+        margin-top: 2px;
+        margin-left: -90px;
+
+        border: 1px solid black;
+        display: none;
+       
+      }
+       .wheelerhover:hover .wheeler{
+        display: block;
+      }
+      
+      .wheelerul{
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 30px;
+      }
+      .wheelerul li{
+        text-align: start;
+        font-size: 20px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 5px;
+      }
+
+      .wheeler1 .wheelerul li{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: -20px;
+        padding-left: 40px;
+        margin-left: -40px;
+        padding-top: 10px;
+      }
+      .wheeler ul li:hover{
+        background-color: rgb(224, 224, 230);
+        border: 1px solid black;
+        width: 100%;
+        padding: 10px 20px;
+        font-weight: bold;
+      }
+
+
+      /* end two wheeler hover */
+
+      .category {
         background-color: rgb(256, 266, 256);
         margin-top: 5px;
         height: 140px;
         margin-left: 10px;
         margin-right: 10px;
-        
       }
-      .imgcat{
+      .imgcat {
         position: relative;
         right: 20px;
         display: flex;
         margin-right: 10px;
       }
-      .sp{
+      .sp {
         padding-top: 30px;
         padding-left: 5px;
         padding-right: 23px;
       }
 
-      .slider{
-        margin-top: 15px;
-        margin-right: 10px;
-        margin-left: 10px;
-        height: 260px;
-        background-image: url(image/slider1.webp);
-        background-color: rgb(82, 164, 164);
-        animation: slider 15s  ease-in-out infinite;
-      }
-      
-      @keyframes slider {
-        
-         50%{
-          background-image: url(image/slider2.webp);
-        }
-         75%{
-          background-image: url(image/slider3.webp);
-        }
-         100%{
-          background-image: url(image/slider4.webp);
-        }
-        
-      }
-      
+      .slider {
+        height: 256px;
+        width: 100%;
 
+        display: flex;
+        overflow: hidden;
+      }
+      .image_slider {
+        height: 256px;
+        width: 100%;
+        margin-right: 10px;
+        display: flex;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+      .imgslide {
+        padding-left: 10px;
+        animation: sliderimg 10s infinite;
+      }
+
+      @keyframes sliderimg {
+        25% {
+          transform: translateX(0%);
+        }
+        50% {
+          transform: translateX(-100%);
+        }
+        75% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(-300%);
+        }
+      }
+     .arrowbtn{
+        display: flex;
+       justify-content: center;
+       align-items: center;
+       justify-content: space-between;
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        z-index: 10;
+
+      }
+      .arrowbtn button{
+       
+        padding: 30px 10px;
+        margin-top: -20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+   
+
+      /* slider end */
+      .best {
+        height: 300px;
+        background-color: rgb(256, 256, 256);
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      div .besth1 {
+        position: relative;
+        top: 5px;
+        left: 5px;
+      }
+      #arrowr {
+        float: right;
+        height: 35px;
+        position: relative;
+        right: 20px;
+        bottom: 60px;
+      }
+      .bestproduct {
+        position: relative;
+        bottom: 50px;
+        height: 220px;
+        width: 100%;
+        background-color: rgb(256, 256, 256);
+        display: flex;
+      }
+      .proimg {
+        border: 0.5px solid rgb(234, 229, 229);
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      footer {
+        height: 400px;
+        background-color: black;
+        padding: 40px 20px 0px;
+        margin-top: 15px;
+      }
+      .f1,
+      .f2,
+      .f3,
+      .f4,
+      .f5,
+      .f6 {
+        height: 260px;
+        width: 220px;
+        padding-right: 10px;
+        background-color: rgb(7, 7, 7);
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      a {
+        text-decoration: none;
+        position: relative;
+        top: 40px;
+        left: 10px;
+        color: rgb(242, 245, 249);
+        font-size: 14px;
+        font-weight: 10px;
+      }
+      .foter {
+        display: flex;
+        gap: 30px;
+      }
+      #spf {
+        position: relative;
+        top: 30px;
+        left: 10px;
+        font-family: "Times New Roman", Times, serif;
+        color: rgb(167, 172, 173);
+      }
+      .hrf5 {
+        border-left: 1px solid rgb(100, 98, 98);
+        padding-left: 40px;
+        height: 210px;
+      }
+      .footerend{
+        height: 70px;
+        background-color: rgb(21, 21, 22);
+        display: flex;
+        gap: 100px;
+        position: relative; 
+        left: 10px;
+        padding-left: 10px;
+        margin-top: 10px;
+        color: aliceblue;
+      }
+
+    .fend{
+      margin-top: 20px;
+      font-size: small;
+    }
+ /* two box left & right sell */
+
+    .topselling{
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-right: 40px;
+      height: 700px;
+      background-color: rgb(256, 256, 256);
+      display: flex;
+      gap: 20px;
+      
+    }
+    .leftselling{
+      height: 690px;
+      width: 550px;
+      background-color: rgb(256, 256, 256);
+      
+    }
+    .rightselling{
+      height: 690px;
+      width: 970px;
+      background-color: black;
+    }
+    .leftsel{
+     height: 250px;
+     width: 250px;
+     margin-top: 20px;
+     margin-left: 20px;
+     border-radius: 5px;
+    border: 1px solid black;
+    
+    }
+   
+    .rightgrid{
+      display: flex;
+      gap: 5px;
+      
+    }
+  .leftgrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+   
+  }
+  
+  .topsell{
+    height: 100px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .topsell h1{
+    margin-left: -60px;
+  }
+  
+  .topsell img{
+    height: 40px;
+    width: 40px;
+    margin-left: 100px;
+    position: relative;
+    left: 30px;
+  }
+
+  .leftsel img{
+    height: 70%;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 25px;
+  }
+  
+  .dispro{
+    margin-left: 20px;
+   margin-top: -2px;
+   font-size: 20px;
+  }
+  .leftsel span{
+     margin-left: 25px;
+     color: rgb(14, 109, 14);
+     font-weight: bold;
+     font-size: 20px;
+ 
+  }
+    
+    
     </style>
   </head>
 
   <body>
     <!-- For Nav Bar -->
     <div class="container">
-      <header>
+      <!-- <header> -->
         <div class="head">
           <div>
-            <img id="sliderimg"   src="image/flipkartLogo.svg" alt="" />
+            <img id="sliderimg" src="image/flipkartLogo.svg" alt="" />
           </div>
           <div class="search">
             <div>
               <img id="imgsearch" src="image/search.png" alt="imge not found" />
+
             </div>
             <div>
               <input
@@ -145,80 +774,477 @@
               />
             </div>
           </div>
-            
+
           <div class="cartmain">
-               <div>
-                <img id="login" src="image/login.png" type="" alt="" />
-                <span>Login</span>
-                <img  id="arrow"  src="image/icons8-expand-arrow-12.png" alt="">
-                
-                </div>
-                <div><img id="cart"   src="image/cart.png" alt="" /></div>
-                <span class="sp">Cart</span>
-                <div><img id="store"   src="image/icons8-store-24.png" alt="" /></div>
-                <span class="sp">Become a Seller</span>
-                <div><img id="dot"   src="image/icons8-three-dots-24.png" alt="" /></div>
-             </div>
+            <div class="log">
+              <img id="login" src="image/login.png" type="" alt="" />
+              <span>Login<div class="loginhover"></div></span>
+              
+              <img id="arrow" src="image/icons8-expand-arrow-12.png" alt="" />
+              <div class="logi">
+              <p style="margin-left: 30px;font-size: 20px;">New Customer? <span style="float: right;margin-top: 15px;color: blue;margin-right: 10px;">Sign Up</span></p>
+              <hr style="width: 100%;margin-top: -30px;">
+              <ul type="none" style="display: grid;grid-template-rows: auto;row-gap: 20px;font-size: 18px;margin-top: -5px;">
+                <li><img style="padding-right: 10px;margin-left: -10px;"  src="image/icons8-male-user-20.png" alt="">My Profile</li>
+                <li><img style="padding-right: 10px;margin-left: -10px;"  src="image/icons8-plus-20.png" alt="">Flipkart Plus Zone</li>
+                <li><img style="padding-right: 10px;margin-left: -10px;"  src="image/icons8-box-20.png" alt="">Orders</li>
+                <li><img style="padding-right: 10px;margin-left: -10px;"  src="image/icons8-heart-20 (1).png" alt="">Wishlist</li>
+                <li><img style="padding-right: 10px;margin-left: -10px;"  src="image/icons8-reward-20.png" alt="">Rewards</li>
+                <li><img style="padding-right: 10px;margin-left: -10px;"  src="image/icons8-gift-card-20.png" alt="">Gift Cards</li>
+              </ul>
+              </div>
+            </div>
+            
+            
+            <div><img id="cart" src="image/cart.png" alt="" /></div>
+            <span class="sp">Cart</span>
+            <div><img id="store" src="image/icons8-store-24.png" alt="" /></div>
+            <span class="sp">Become a Seller</span>
+            <div class="dothover1">
+              <img id="dot" src="image/icons8-three-dots-24.png" alt="" />
+              <div class="dothover" >
+                <ul type="none">
+                 <li><img src="image/icons8-notification-12.png" alt=""> Notification Preferences</li>
+                  <li><img src="image/icons8-headphone-12.png" alt=""> 24x7 Customer Care</li>
+                  <li><img src="image/icons8-increase-12.png" alt=""> Advertise</li>
+                  <li><img src="image/icons8-download-12.png" alt=""> Download App</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
         </div>
-      </header>
+      <!-- </header> -->
     </div>
     <!-- End NavBar -->
 
     <!-- Category Section -->
-<div class="category">
-    <div class="catbox">
-         <div class="imgcat">
-            <figure>
-            <img src="image/glosery.webp" alt="">
+    <div class="category">
+      <div class="catbox">
+        <div class="imgcat">
+          <figure>
+            <img src="image/glosery.webp" alt="" />
             <figcaption>Grocery</figcaption>
-            </figure>
-            <figure>
-            <img src="image/mobilewebp.webp" alt="">
+          </figure>
+          <figure>
+            <img src="image/mobilewebp.webp" alt="" />
             <figcaption>Mobile</figcaption>
-            </figure>
-            <figure>
-            <img src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt="">
-            <figcaption>Fasion</figcaption>
-            </figure>
-            <figure>
-            <img src="https://rukminim1.flixcart.com/flap/80/80/image/69c6589653afdb9a.png?q=100" alt="">
-            <figcaption>Electronics</figcaption>
-            </figure>
-            <figure>
-            <img src="https://rukminim1.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100" alt="">
-            <figcaption>Home & Furniture</figcaption>
-            </figure>
-            <figure>
-            <img src="image/appliances.webp" alt="">
+          </figure>
+          <div class="fashover">
+          <figure>
+            <img
+              src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100"
+              alt=""
+            />
+            <figcaption>Fasion <img id="fashover"  src="image/icons8-expand-arrow-12.png" alt="" /> <div class="fas">
+              <ul class="fasul" type="none"
+            > <li>Mens Top Wear <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Mens Buttom Wear <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Womens Ethnic <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Womens Western <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Mens Footwear <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Womeens Footwear <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Watches & Accessories <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Bags,Suitcase & Luggage <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Kids <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Essential <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li></ul>
+            </div><div class="fas1">
+               <ul class="fasul" type="none"
+            > <li style="font-weight: bold;">More in Mens Top Wear </li>
+              <li>All </li>
+              <li>Mens Tshirt </li>
+              <li>Mens Casual Shirts  </li>
+              <li>Mens Formal Shirts </li>
+              <li>Mens Kurtas </li>
+              <li>Mens Ethics Set </li>
+              <li>Mens Blazers  </li>
+              <li>Mens Suit  </li>
+              <li>Mens sweatshirt </li></ul>
+            </div></figcaption>
+          </figure>
+          </div>
+
+          <div class="elehover">
+          <figure>
+            <img
+              src="https://rukminim1.flixcart.com/flap/80/80/image/69c6589653afdb9a.png?q=100"
+              alt=""
+            />
+            <figcaption style="display: flex;">Electronics<img src="image/icons8-expand-arrow-12.png" alt="" /><div class="ele">
+              <ul class="eleul" type="none"
+            > <li>Audio <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Electronics GST Store <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Cameras & Accessories <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Gaming <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Health & Personal Care <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Laptop Accessories <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Laptop & Desktop <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Mobile Accessories <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Powerbank<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Smart Wearables <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li></ul>
+            </div><div class="ele1">
+               <ul class="eleul" type="none"
+            > <li style="font-weight: bold;">More in Audio </li>
+              <li>More in Audio </li>
+              <li>All </li>
+              <li>Bluetooth Headphones  </li>
+              <li>Wired Headphones</li> </li>
+              <li>True Wireless Earbuds</li>
+              <li>Bluetooth Speakers </li>
+              <li>Soundbars </li>
+              <li>Home Theaters </li>
+              <li>Remote Control </li></ul>
+            </div></figcaption>
+          </figure>
+          </div>
+          <div class="homehover">
+          <figure>
+            <img
+              src="https://rukminim1.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100"
+              alt=""
+            />
+            <figcaption style="text-wrap: nowrap;">Home & Furniture<img src="image/icons8-expand-arrow-12.png" alt="" /><div class="home">
+              <ul class="homeul" type="none"
+            > <li>Home Furnishings <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Furniture Studio <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Living Room Furniture <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Kitchen & Dining <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Bedroom Furniture <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Space Saving Furniture <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Home Decor<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Tools & Utility <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Cleaning & Bath <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li> <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li></ul>
+            </div><div class="home1">
+               <ul class="homeul" type="none"
+            > <li style="font-weight: bold;">More in Home Furnishings </li>
+              <li>All </li>
+              <li>Bedlines </li>
+              <li>Blankets </li>
+              <li>Bedsheets </li>
+              <li>Curtains & Accessories </li>
+              <li>Bath Linen </li>
+              <li>Floor Covering  </li>
+              <li>Cover & Protectors </li>
+              <li>Sofa & Curtain Fabrics </li></ul>
+            </div></figcaption>
+          </figure>
+          </div>
+          <figure>
+            <img src="image/appliances.webp" alt="" />
             <figcaption>Appliances</figcaption>
-            </figure><figure>
-            <img src="image/travelwebp.webp" alt="">
+          </figure>
+          <figure>
+            <img src="image/travelwebp.webp" alt="" />
             <figcaption>Travel</figcaption>
-            </figure>
-            <figure>
-            <img src="	https://rukminim1.flixcart.com/flap/80/80/image/dff3f7adcf3a90c6.png?q=100" alt="">
-            <figcaption>Beauty,Toy & More</figcaption>
-            </figure>
-            <figure>
-            <img src="	https://rukminim1.flixcart.com/fk-p-flap/80/80/image/05d708653beff580.png?q=100" height="60%" alt="">
-            <figcaption>Two Wheelers</figcaption>
-            </figure>
-
+          </figure>
+          <div class="beautyhover">
+          <figure>
+            <img
+              src="	https://rukminim1.flixcart.com/flap/80/80/image/dff3f7adcf3a90c6.png?q=100"
+              alt=""
+            />
+            <figcaption >Beauty,Toy & More <img src="image/icons8-expand-arrow-12.png" alt="" /><div class="beauty">
+              <ul class="beautyul" type="none"
+            > <li>Beauty & Personal Care<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Mens Grooming <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Foods & Drinks<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Nutrition & health care<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Baby Care <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Toys & School supplies<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Sports & Fitness<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Books<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Musics<img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li>
+              <li>Safety & Hygiene Essential <img id="arrowright"  src="image/icons8-arrow-right.png" alt="" /> </li></ul>
+            </div><div class="beauty1">
+               <ul class="beautyul" type="none"
+            > <li style="font-weight: bold;">More in Mens Grooming </li>
+              <li>View All </li>
+              <li>Face Washes</li>
+              <li>Beard oil  </li>
+              <li>Hair Styling</li>
+              <li>Shaving Essential</li>
+              <li>Aftershave </li>
+              <li>Face Creams & Face Packs </li>
+              <li>Soaps & Bodywashes </li>
+              <li>Mens Grooming Combos </li></ul>
+            </div></figcaption>
+          </figure>
+          </div>
+          <div class="wheelerhover">
+          <figure>
+            <img
+              src="	https://rukminim1.flixcart.com/fk-p-flap/80/80/image/05d708653beff580.png?q=100"
+              height="60%"
+              alt=""
+            />
+            <figcaption>Two Wheelers <img src="image/icons8-expand-arrow-12.png" alt="" /><div class="wheeler">
+              <ul class="wheelerul" type="none"
+            > <li>Petrol Vehicles</li>
+              <li>Electric Vehicles</li> 
+            </div></figcaption>
+          </figure>
+          </div>
         </div>
+      </div>
+    </div>
+    <!-- category end -->
+
+    <!-- slider -->
+    <!-- <div class="slider"> -->
+    <div class="slider">
+        <div class="arrowbtn">
+            <button  ><img style="transform: rotate(180deg);" src="image/icons8-arrow-right.png" alt=""></button>
+            <button ><img  src="image/icons8-arrow-right.png" alt=""></button>
+        </div>
+      <div class="image_slider">
+        
+        <img class="imgslide" src="image/slider1.webp" alt="" />
+        <img class="imgslide" src="image/slider2.webp" alt="" />
+        <img class="imgslide" src="image/slider3.webp" alt="" />
+        <img class="imgslide" src="image/slider4.webp" alt="" />
+      </div>
+        
+    </div>
+    <!-- </div> -->
+    <!-- slider end -->
+
+    <div class="best">
+      <div class="besth1">
+        <h1>Best Of Electronics</h1>
+        <img id="arrowr" src="image/icons8-arrow-24 (1).png" alt="" />
+      </div>
+      <div class="bestproduct">
+        <div class="proimg">
+          <figure>
+            <img
+              src="image/projector1.webp"
+              height="160px"
+              width="130px"
+              alt=""
+            />
+            <figcaption>Projector From 10000</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img
+              src="image/camerajpg.jpg"
+              height="160px"
+              width="130px"
+              alt=""
+            />
+            <figcaption>Camera From 30000</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/printer.avif" height="160px" width="130px" alt="" />
+            <figcaption>Printer From 5000</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/trimmer.jpg" height="160px" width="130px" alt="" />
+            <figcaption>Trimmer From 1000</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/monitor.jpg" height="160px" width="130px" alt="" />
+            <figcaption>Monitor From 8000</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/keyboard.jpg" height="160px" width="130px" alt="" />
+            <figcaption>Keyboard From 500</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+<!-- new container two box -->
+
+<div class="topselling">
+      
+<div class="leftselling">
+
+  <div class="topsell">
+    <h1>End Of Season Best Seller</h1>
+    <img src="image/icons8-arrow-24 (1).png" alt="">
+  </div>
+  <div class="leftgrid">
+  <div class="leftsel">
+    <img src="image/laptopbag.jpg" alt="">
+   
+    <p class="dispro">Laptop Bags</p>
+    <span>Min. 70% Off</span>
     
+  </div>
+  <div class="leftsel"> <img src="image/tshirtformen.webp" alt="">
+    <p class="dispro">Mens Tshirt</p>
+    <span>Min. 50% Off</span></div>
+  <div class="leftsel"> <img src="image/slipper_.jpg" alt="">
+    <p class="dispro">Mens Slipper</p>
+    <span>Min. 70% Off</span></div>
+  <div class="leftsel"> <img src="image/shirt.jpg" alt="">
+    <p class="dispro">Mens Shirt</p>
+    <span>Min. 50% Off</span></div>
+  </div>
 </div>
+<div class="rightselling">
+  <div class="phoneselling">
+    <img src="image/topselling.png" height="700px%" width="100%">
+  </div>
 </div>
-    
-<div class="slider">
-  
+
 </div>
 
-<!-- category end -->
 
 
+    <div class="best">
+      <div class="besth1">
+        <h1>Pick Your Styles</h1>
+        <img id="arrowr" src="image/icons8-arrow-24 (1).png" alt="" />
+      </div>
+      <div class="bestproduct">
+        <div class="proimg">
+          <figure>
+            <img
+              src="image/luggage.jpg"
+              height="160px"
+              width="130px"
+              alt=""
+            />
+            <figcaption>Luggage From 2500</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img
+              src="image/sweatshirt.jpg"
+              height="160px"
+              width="130px"
+              alt=""
+            />
+            <figcaption>sweatshirt From 500</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/shoes.jpg" height="160px" width="130px" alt="" />
+            <figcaption>Shoes From 300</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/jeans.webp" height="160px" width="130px" alt="" />
+            <figcaption>Jeans From 700</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/watch.jpg" height="160px" width="130px" alt="" />
+            <figcaption>SmartchWatch From 1000</figcaption>
+          </figure>
+        </div>
+        <div class="proimg">
+          <figure>
+            <img src="image/sunglasses.jpg" height="160px" width="130px" alt="" />
+            <figcaption>Sunglasses From 300</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  <!-- Footer Start -->
+    <footer>
+      <div class="foter">
+        <div class="f1">
+          <span id="spf">ABOUT</span>
+          <a href="">Contact Us</a><a href="">About Us</a><a href="">Careers</a
+          ><a href="">FlipkartStories</a><a href="">Press</a
+          ><a href="">Corporate Information</a>
+        </div>
+        <div class="f2">
+          <span id="spf">GROUP COMPANIES</span> <a href="">Myntra</a
+          ><a href="">Flipkart Wholesale</a><a href="">Cleartrip</a
+          ><a href="">Shopsy</a>
+        </div>
+        <div class="f3">
+          <span id="spf">HELP</span> <a href="">Payment</a
+          ><a href="">Shipping</a><a href="">Cancellation & Returns</a
+          ><a href="">FAQ</a><a href="">Report Infrigement</a>
+        </div>
+        <div class="f4">
+          <span id="spf">CONSUMER POLICY</span>
+          <a href="">Cancellation & Returns</a><a href="">Terms of Use</a
+          ><a href="">Security</a><a href="">Privacy</a><a href="">Sitemap</a
+          ><a href="">Grievance Redressal</a><a href="">ERP Compliance</a>
+        </div>
+        <div class="f5 hrf5">
+          <span id="spf">Mail Us</span>
+          <p
+            style="
+              width: 100%;
+              margin-top: 40px;
+              font-size: 12px;
+              margin-left: 10px;
+              word-spacing: 7px;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            "
+          >
+            Flipkart International Private Limited Buildings, Alyssa Begonia and
+            clove Embassy Tech Village,Outer Ring Road,Devasarabesanahalli
+            Village ,Bengaluru,560103,Karnataka,India
+          </p>
+          <p style="color: rgb(109, 110, 111);margin-left: 10px;">Socials:</p>
+          <div style="padding-left:10px;position: relative;background: 10px;">
+          <img src="image/icons8-facebook-25.png" alt="">
+          <img src="image/icons8-twitterx-25.png" alt="">
+          <img src="image/icons8-youtube-25.png" alt="">
+          </div>
+        </div>
+        <div class="f6">
+          <span id="spf">Registered Office Address</span>
+          <Telephone:044-45614700
+            style="
+              width: 100%;
+              margin-top: 40px;
+              font-size: 12px;
+              margin-left: 10px;
+              word-spacing: 7px;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            "
+          >
+            Flipkart International Private Limited Buildings, Alyssa Begonia and
+            clove Embassy Tech Village,Outer Ring Road,Devasarabesanahalli
+            Village ,Bengaluru,560103,Karnataka,India
+            <br>
+            <br>
+            CIN: U5109KA2012PTC066107
+            
+            <br>
+           Telephone:044-45614700
+         
+          </p>
+          
+        </div>
+      </div>
+      <hr style="margin-top: 50px" />
+       
+      <div class="footerend">
+       <div class="fend"> <img style="width: 10px;height:10px;"  src="image/icons8-shop-25 (1).png">
+        Become a Seller</div>
+       <div class="fend"><img style="margin-right: 2px;margin-top:2px;" src="image/icons8-star-of-bethlehem-15.png" alt="">Advertise</div>
+       <div class="fend"><img style="margin-right: 2px;margin-top:2px;"  src="image/icons8-gift-15 (1).png" alt="">Gift Cards</div>
+       <div class="fend"><img style="margin-right: 2px;margin-top:2px;"  src="image/icons8-help-15.png" alt="">Help Center</div>
+       <div class="fend"><img style="margin-right: 2px;"  src="image/icons8-circled-c-15.png" alt="">2007-2024 Flipkart.com</div>
+       <div class="fend"><img style="width: 400px;" src="image/footercard.png" alt=""></div>
 
+      </div>
+    </footer>
 
-
-
+    <!-- Footer End -->
   </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider{
+            height: 256px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            overflow: hidden;
+        }
+        .image_slider{
+             height: 256px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            overflow: hidden;
+        }
+        .imgslide{
+            padding-left: 10px;
+            animation: sliderimg 10s infinite;
+        }
+        .leftbtn{
+            position: absolute;
+            z-index: 1;
+             top: 120px;
+        }
+        .rightbtn{
+            position: absolute;
+            left: 1468px;
+            top: 120px;
+            
+        }
+        
+        @keyframes sliderimg {
+            25%{
+                transform: translateX(0%);
+            }
+            50%{
+                transform: translateX(-100%);
+            }
+            75%{
+                transform: translateX(-200%);
+            }
+            100%{
+                transform: translateX(-300%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+       <div class="btncontainer leftbtn">
+        <button><img src="image/leftarrow.png" alt=""></button>
+       </div>
+       <div class="image_slider">
+       <img class="imgslide"   src="image/slider1.webp" alt="">
+       <img class="imgslide"  src="image/slider2.webp" alt="">
+       <img  class="imgslide"  src="image/slider3.webp" alt="">
+       <img  class="imgslide"  src="image/slider4.webp" alt="">
+       </div>
+       <div class="btncontainer rightbtn" onclick="right()">
+        <button ><img src="image/rightarrow.png"></button>
+       </div>
+         
+    </div>
+    
+</body>
+</html>
