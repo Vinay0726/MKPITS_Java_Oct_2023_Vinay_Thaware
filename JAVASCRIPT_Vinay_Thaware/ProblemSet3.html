@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let systemInput = Math.ceil(Math.random() * 10);
+
+      console.log(systemInput);
+      while (true) {
+        let userInput = prompt("Enter a number ");
+        // console.log(userInput);
+
+        if (systemInput == userInput) {
+          // console.log("Your Number is Matched")
+          alert("Congratulation Your Number Is Correct");
+          break;
+        }
+        if (systemInput > userInput) {
+          // console.log("You Added Small Number")
+          alert("You Enter Small Number");
+        } else {
+          // console.log('You Added Large Number')
+          alert("You Enter Large Number");
+        }
+      }
+    </script>
+  </body>
+</html>
