@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replace 4th character</title>
+  </head>
+  <body>
+    <script>
+      let myName = prompt("Enter Your Name?");
+      console.log(myName);
+
+      let index = parseInt(prompt("Enter Index Number"));
+
+      let myChar =prompt(
+        "What would you like to replace the character with?"
+      );
+
+      let newChar=myChar.charAt();
+
+      let newName = myName.replace(myName[index],newChar);
+
+      alert("Your Updated  Username is " + newName);
+    </script>
+  </body>
+</html>
