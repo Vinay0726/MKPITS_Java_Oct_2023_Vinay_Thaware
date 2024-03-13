@@ -5,3 +5,8 @@ myNum.map((value,index,Array)=>{
     console.log(value*2)
 
 })
+
+let square=myNum.map((value)=>{
+    return value*value
+})
+console.log(square)

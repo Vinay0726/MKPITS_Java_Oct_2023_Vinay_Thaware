@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array divisibleByTen</title>
+  </head>
+  <body>
+    <script>
+      let arr = [15, 10, 39, 50, 25, 70];
+
+      let divTen = arr.filter(divisibleByTen);
+      function divisibleByTen(num) {
+        if (num % 10 == 0) {
+          return num;
+        }
+      }
+      console.log(divTen);
+    </script>
+  </body>
+</html>
