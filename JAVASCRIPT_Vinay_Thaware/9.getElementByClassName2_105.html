@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="developer">GetElementByID</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="name">hello I am Vinay</h1>
+
+    <p class="developer">I am a Full Stack Developer</p>
+
+    <p id="city">From Nagpur <span>4400013</span> <span>Maharashtra</span></p>
+
+    <h3 class="developer">Skills:- <span>Java Html CSS Js Sql </span></h3>
+
+    <script>
+      let result= document.getElementsByClassName(`developer`);
+      document.write(result+"<br>");//browser
+      console.log(result)
+
+      let result1= document.body.getElementsByClassName(`developer`);
+      document.write(result1);//browser
+      console.log(result1)
+
+      
+    </script>
+  </body>
+</html>

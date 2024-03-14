@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetElementByID</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="name">hello I am Vinay</h1>
+
+    <p>I am a Full Stack Developer</p>
+
+    <p id="city">From Nagpur <span>4400013</span> <span>Maharashtra</span></p>
+
+    <h3>Skills:- <span>Java Html CSS Js Sql </span></h3>
+
+    <script>
+    //     //[1] get the perticular tag using this .....Select index Numbering
+    //   let result= document.getElementsByTagName(`p`)[1];
+    //   document.write(result);
+    //   console.log(result)
+ 
+
+    let data = document.getElementsByTagName("p");
+    //   let len = data.length; //4
+    //   for (let i = 0; i < len; i++) {
+    //     let result = document.getElementsByTagName("p")[i];
+    //     document.write(result + "<br>");
+    //     console.log(result);
+    //   }
+
+      //for of
+
+      for (const itr of data) {
+        document.write(itr+"<br>")
+        console.log(itr)
+      }
+
+
+
+      
+    </script>
+  </body>
+</html>
