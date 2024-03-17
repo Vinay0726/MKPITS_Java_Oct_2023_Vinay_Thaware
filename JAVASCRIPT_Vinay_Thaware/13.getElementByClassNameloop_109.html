@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="developer">GetElementByID</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="name" class="developer">hello I am Vinay</h1>
+     
+    <p class="developer myskills">I am a Full Stack Developer</p>
+    
+
+
+   
+    <p id="city">From Nagpur <span>4400013</span> <span>Maharashtra</span></p>
+    
+<div id="show">
+    <h3 class="myskills">Skills:- <span>Java Html CSS Js Sql </span></h3>
+</div>
+    <script>
+        let data= document.getElementsByClassName("myskills")[0];
+        // document.write(data)
+        // console.log(data)
+
+        // for (let index = 0; index < data.length; index++) {
+        //     document.write(data[index]+`<br>`);
+        //     console.log(data[index]+`<br>`)
+        // }
+
+        for (const itr of data) {
+             document.write(itr+`<br>`)
+            console.log(itr+`<br>`)
+            
+        }
+
+
+    </script>
+  </body>
+</html>

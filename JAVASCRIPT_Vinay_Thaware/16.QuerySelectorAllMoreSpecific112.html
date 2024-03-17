@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="developer">GetElementByID</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="name" class="developer">hello I am Vinay</h1>
+     
+    <p class="developer myskills">I am a Full Stack Developer</p>
+    
+
+
+   
+    <p id="city">From Nagpur <span>4400013</span> <span>Maharashtra</span></p>
+    
+<div id="show">
+    <h3 class="myskills">Skills:- <span class="myspan">Java Html CSS Js Sql </span></h3>
+</div>
+    <script>
+         // more specific
+      // let data = document.getElementById("show");
+      // let result = document.querySelectorAll("span.myspan");
+      // document.write(result);
+      // console.log(result);
+
+      // let result = document.getElementById("show").querySelectorAll("span.myspan");
+      // document.write(result);
+      // console.log(result);
+
+      // let result = document.querySelectorAll("#show > .myskills > span.myspan");
+    //   let result = document.querySelectorAll("#show > span.myspan");
+    //   document.write(result);
+    //   console.log(result);
+
+      
+        let result = document.getElementById("show").querySelectorAll("h3, span");
+        document.write(result);
+        console.log(result);
+
+
+    </script>
+  </body>
+</html>

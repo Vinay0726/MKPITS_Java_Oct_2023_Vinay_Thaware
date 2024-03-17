@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="developer">GetElementByID</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="name" class="developer">hello I am Vinay</h1>
+     
+    <p class="developer myskills">I am a Full Stack Developer</p>
+    
+
+
+   
+    <p id="city">From Nagpur <span>4400013</span> <span>Maharashtra</span></p>
+    
+<div id="show">
+    <h3 class="myskills">Skills:- <span>Java Html CSS Js Sql </span></h3>
+</div>
+    <script>
+         // Element Selector
+    //   let result = document.querySelector("p");
+    //   First come First Get
+    //   let result = document.querySelector("div, p, h1");
+    //   document.write(result);
+    //   console.log(result);
+
+            // ID Selector
+        // let result1 = document.querySelector("#show");
+        let result1 = document.querySelector("#show,#name");//whos first come they will get
+        document.write(result1);
+        console.log(result1);
+
+
+             // Class Selector
+        //  let result2 = document.querySelector(".developer");
+    //    let result2 = document.querySelector(".developer,.myskills");
+    //     document.write(result2);
+    //     console.log(result2);
+
+       
+
+    </script>
+  </body>
+</html>
