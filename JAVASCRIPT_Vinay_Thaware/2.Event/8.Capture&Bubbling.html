@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <style>
+      #div1 {
+        height: 400px;
+        width: 400px;
+        background-color: brown;
+      }
+      #div2 {
+        height: 300px;
+        width: 300px;
+        background-color: rgb(42, 165, 42);
+      }
+      #div3 {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(212, 215, 32);
+      }
+      #div4 {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(165, 42, 163);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Capture & Bubbling</h1>
+    <div id="div1">
+      1
+      <div id="div2">
+        2
+        <div id="div3">
+          3
+          <div id="div4">4</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //  Bubbling Phase=>click then parent ancestor
+
+    //   document.getElementById(`div1`).addEventListener(
+    //     `click`,
+    //     () => {
+    //       console.log("1");
+    //     },
+    //     false
+    //   );
+    //   document.getElementById(`div2`).addEventListener(
+    //     `click`,
+    //     () => {
+    //       console.log("2");
+    //     },
+    //     false
+    //   );
+    //   document.getElementById(`div3`).addEventListener(
+    //     `click`,
+    //     () => {
+    //       console.log("3");
+    //     },
+    //     false
+    //   );
+    //   document.getElementById(`div4`).addEventListener(
+    //     `click`,
+    //     () => {
+    //       console.log("4");
+    //     },
+    //     false
+    //   );
+       //  Capture Phase=>click then child serial wise
+
+      document.getElementById(`div1`).addEventListener(
+        `click`,
+        () => {
+          console.log("1");
+        },
+        true
+      );
+      document.getElementById(`div2`).addEventListener(
+        `click`,
+        () => {
+          console.log("2");
+        },
+        true
+      );
+      document.getElementById(`div3`).addEventListener(
+        `click`,
+        () => {
+          console.log("3");
+        },
+        true
+      );
+      document.getElementById(`div4`).addEventListener(
+        `click`,
+        () => {
+          console.log("4");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

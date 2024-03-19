@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <h1>OverRiding Event</h1>
+
+    <button id="myId">Click Me!</button>
+    <script>
+      let myId = document.getElementById(`myId`);
+
+      myId.onclick = display1;
+      myId.onclick = display2;
+      function display1() {
+        alert(`You Click Button1`);
+      }
+      function display2() {
+        alert(`You Click Button2`);
+      }
+    </script>
+  </body>
+</html>
