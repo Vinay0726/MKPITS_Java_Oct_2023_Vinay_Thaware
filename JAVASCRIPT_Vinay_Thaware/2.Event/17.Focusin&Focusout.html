@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <h1>FocusIN & FocusOut</h1>
+    <input type="text" id="myName" placeholder="Name" />
+
+    <script>
+      var name = document.getElementById(`myName`);
+      let focIn = () => {
+        myName.style.backgroundColor = "red";
+      };
+      let focOut = () => {
+        myName.style.backgroundColor = "white";
+      };
+      myName.addEventListener("focusin", focIn);
+      myName.addEventListener("focusout", focOut);
+    </script>
+  </body>
+</html>

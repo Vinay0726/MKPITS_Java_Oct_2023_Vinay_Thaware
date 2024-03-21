@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window</title>
+  </head>
+  <body>
+    <h1>Difference Between inner & outer</h1>
+  </body>
+
+  <script>
+    // Window Outer->ALL Screen get
+
+    var outH;
+    outH = window.outerHeight; //height
+    console.log("Outer  Height : " + outH);
+    var outW;
+    outW = window.outerWidth; //width
+    console.log("Outer Width : " + outW);
+
+    // Window Inner->Browser Screen get
+    var innH;
+    innH = window.innerHeight; //height
+    console.log("Inner  Height : " + innH);
+    var innW;
+    innW = window.innerWidth; //width
+    console.log("Inner  Width : " + innW);
+  </script>
+</html>

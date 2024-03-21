@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <h1>key Event</h1>
+    <input type="text" id="myName" placeholder="Name" />
+
+    <script>
+      var name = document.getElementById(`myName`);
+      let show = (e) => {
+        
+         console.log(e.type + ' ' +e.data);
+
+        
+      };
+
+      myName.addEventListener("textInput", show,false);
+      
+    </script>
+  </body>
+</html>
