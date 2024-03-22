@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body onload="alert('Hello Window');"></body>
+	<div id="mydiv"></div>
+
+	<script>
+		window.onload = () =>{
+			document.getElementById("mydiv").textContent = "Hello Window";
+		}
+
+		let show=()=> {
+			document.getElementById("mydiv").textContent = "Hello Window";
+		}
+		window.addEventListener("load", show);
+	</script>
+
+    
+</body>
+</html>
