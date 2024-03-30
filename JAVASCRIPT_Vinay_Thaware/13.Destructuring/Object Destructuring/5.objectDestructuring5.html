@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object Destructuring</title>
+  </head>
+  <body>
+    <script>
+      // b has default value 20
+      let { a, b = 20 } = { a: 10 };
+      // let { a = 40, b = 20 } = { a: 90 };
+      console.log(a);
+      console.log(b);
+
+      // let { a: y = 40, b: z = 20 } = { a: 10 };
+      // console.log(y);
+      // console.log(z);
+    </script>
+  </body>
+</html>

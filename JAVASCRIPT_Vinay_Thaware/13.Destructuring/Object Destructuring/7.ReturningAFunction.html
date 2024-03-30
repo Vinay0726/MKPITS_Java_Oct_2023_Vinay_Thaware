@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+     <script>
+      let course = {
+        courseName: "JavaScript",
+        duration: "SixMonths",
+        tutor: "Mkpits"
+      };
+      let show=(z)=> {
+        return z;
+      }
+      /* Old Way
+      let x = show(course);
+      console.log(x.courseName);
+      console.log(x.duration);
+      console.log(x.tutor);
+      */
+
+      // Destructuring
+      // let x = show(course);
+      // let { courseName, duration, tutor } = x;
+      let { courseName, duration, tutor } = show(course);
+      console.log(courseName);
+      console.log(duration);
+      console.log(tutor);
+    </script>
+</body>
+</html>

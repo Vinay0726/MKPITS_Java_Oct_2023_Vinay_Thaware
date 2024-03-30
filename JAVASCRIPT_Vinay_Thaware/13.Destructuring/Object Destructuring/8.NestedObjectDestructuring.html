@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object Destructuring</title>
+</head>
+<body>
+   <script>
+     let course={coursename:`Java`,duration:`6months`,institute:`mkpits`,student:{stu1:`vinay`,stu2:`Raj`}}
+
+    let {coursename,duration,institute,student:{stu1,stu2}} =course;
+    console.log(coursename)
+    console.log(duration)
+    console.log(institute)
+    console.log(stu1)
+    console.log(stu2)
+   </script>
+</body>
+</html>
