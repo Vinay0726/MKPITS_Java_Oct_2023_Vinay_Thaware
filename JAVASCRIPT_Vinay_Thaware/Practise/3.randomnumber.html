@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="random1" style="font-size: 50px; color: black;"> </h1>
+      <h1 id="random2" style="font-size: 50px; color: black;"> </h1>
+        <h1 id="random3" style="font-size: 50px; color: black;"> </h1>
+    
+    <!-- <script> 
+    const random1=document.getElementById('random1');
+    const random2=document.getElementById('random2');
+    const random3=document.getElementById('random3');
+    const min=1;
+    const max=25;
+    let randomnum1=Math.floor(Math.random()*max)+min;
+     let randomnum2=Math.floor(Math.random()*max)+min;
+      let randomnum3=Math.floor(Math.random()*max)+min;
+    random1.textContent=randomnum1;
+    random1.textContent=randomnum1; 
+    random2.textContent=randomnum2;
+    random3.textContent=randomnum3; 
+   
+    </script> -->
+    <script>
+     const random1 = document.getElementById('random1');
+    const random2 = document.getElementById('random2');
+    const random3 = document.getElementById('random3');
+
+    // Function to shuffle an array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Create an array of numbers from 1 to 25
+    const numbersArray = [];
+    for (let i = 1; i <= 25; i++) {
+        numbersArray.push(i);
+    }
+
+    // Shuffle the array
+    const shuffledArray = shuffleArray(numbersArray);
+
+    // Assign the first three values to the elements
+    random1.textContent = shuffledArray[0];
+    random2.textContent = shuffledArray[1];
+    random3.textContent = shuffledArray[2]; 
+    </script>
+</body>
+</html>

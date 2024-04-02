@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="timer">
+
+        <h1 id="timer"></h1>
+    </div>
+    <script>
+
+       const startmin=5;
+       const time=startmin*60;
+       const timerel=document.getElementById('timer');
+       setInterval(updatetimer,1000);
+       function updatetimer(){
+         const min=Math.floor(time/60);
+         const second=time%60;
+          second=second<10 ? '0'+secomd:second;
+          timerel.innerHTML='${min}:${second}';
+        time--;
+       }
+    </script>
+</body>
+</html>

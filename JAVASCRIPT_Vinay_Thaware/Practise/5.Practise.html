@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="5.Practise.html" method="get">
+
+        <input type="text" name="name" id=""><br>
+        <input type="number" name="age" id=""><br>
+        <button type="submit">submit</button>
+    </form>
+
+    <h1>Name:</h1>
+    <p>Age: <span id="age"></span><br>
+
+    <script>
+        let  params = new URLSearchParams(window.location.search);
+         document.querySelector("h1").innerHTML  += params.get('name');
+         document.getElementById("age").textContent += params.get('age');
+    </script>
+</body>
+</html>
