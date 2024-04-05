@@ -10,6 +10,6 @@
 Name : ${param.fName} ${param.lName}<br>
 City : ${param.city}<br>
 
-Gender: ${param.male}${param.female}
+Gender: ${param.gender}
 </body>
 </html>
