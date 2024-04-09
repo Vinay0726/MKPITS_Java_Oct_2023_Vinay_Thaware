@@ -8,13 +8,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Student Data forEach</title>
+<title>if</title>
 </head>
 <body>
 	<%
 	List<Student> data = new ArrayList<Student>();
 	data.add(new Student("Vinay", "Thaware", false));
-	data.add(new Student("Raj", "Warhokar", false));
+	data.add(new Student("Raj", "Warhokar", true));
 	data.add(new Student("Regved", "Pande", false));
 	data.add(new Student("Harsh", "Gupta", true));
 	pageContext.setAttribute("myStudent",data);
@@ -23,7 +23,8 @@
 	 <c:forEach var="tempStudent" items="${myStudent}">
     <tr><td>${tempStudent.firstName}</td>
        <td>${tempStudent.lastName}</td>
-        <td>${tempStudent.isgoIdCustomer}</td></tr>
+        <td><c:if test="${tempStudent.isgoIdCustomer}">Special Discount</c:if>
+        <c:if test="${not tempStudent.isgoIdCustomer}">---</c:if></td></tr>
      
         <br>
     </c:forEach>
