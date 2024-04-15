@@ -15,18 +15,19 @@
 		</div>
 	</div>
 	<div id="container">
-	<h3>Add Student</h3></div>
+	<h3>Update Student</h3></div>
 	<form action="StudentControllerServletNew" method="get">
 	<input type="hidden" name="command" value="ADD"/>
+	<input type="hidden" name="studentId" value=${THE_STUDENT}/>
 	<table>
 	<tbody>
 	<tr><td><label>First Name :</label></td>
-	<td><input type="text" name="firstName"/></td></tr>
+	<td><input type="text" name="firstName" required="required" value=${THE_STUDENT.firstName}></td></tr>
 	<tr><td><label>Last Name :</label></td>
-	<td><input type="text" name="lastName"/></td></tr>
+	<td><input type="text" name="lastName" required="required" value=${THE_STUDENT.lastName}></td></tr>
 	<tr><td><label>Email :</label></td>
-	<td><input type="email" name="email"/></td></tr>
-	<tr><td><input type="submit" value="Save" class="save">
+	<td><input type="email" name="email" required="required" value=${THE_STUDENT.email}></td></tr>
+	<tr><td><input type="submit" value="Add" class="save">
 	</tbody></table></form>
 	<div style="clear:both;"></div>
 	<p><a href="StudentControllerServletNew">Back To List</a></p>
