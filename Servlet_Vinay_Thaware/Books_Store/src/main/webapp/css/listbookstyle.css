@@ -1,6 +1,6 @@
 body,html{
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	background-color:azure;
 }
 #content{
@@ -15,7 +15,7 @@ body,html{
 table{
 	padding: 5px;
 	box-shadow: 5px 5px 10px 10px lightgrey;
-	
+	height: 100vh;
 }
 th{
 	margin: 10px;
@@ -27,7 +27,7 @@ td{margin: 10px;
 	padding: 18px;
 }
 tr:nth-child(even){
-	background-color: lightgoldenrodyellow;
+	background-color:powderblue;
 }
 tr:nth-child(odd){
 	background-color: gainsboro;
