@@ -107,7 +107,7 @@ public class BooksControllerServlet extends HttpServlet {
 	}
 	private void loadBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//read student id from data
-				String theBookId=request.getParameter("booksId");
+				String theBookId=request.getParameter("bookId");
 				//get student from database(dbutility)
 				Books_Model theBook=booksDbutil.loadBooks(theBookId);
 				
