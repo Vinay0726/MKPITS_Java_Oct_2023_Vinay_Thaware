@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Interface3 implements Interface1{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
