@@ -1,10 +1,8 @@
 package com.example.demo.controller;
-
-
-import com.example.demo.dto.AddressDto;
 import com.example.demo.dto.EmployeeDto;
+import com.example.demo.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -12,44 +10,32 @@ import java.util.List;
 
 @RestController
 public class EmployeeController {
+    EmployeeService employeeServiceSetter = new EmployeeService();
 
-@GetMapping("/employee")
-    public  ResponseEntity<Object> getEmployee(){
-        EmployeeDto employeeDto=new EmployeeDto();
-        employeeDto.setName("Vinay Thaware");
-        employeeDto.setDepartment("IT");
-        employeeDto.setDesignation("Software Engineer");
+    EmployeeService employeeServiceConstructor = new EmployeeService();
 
-
-    AddressDto addressDto1 = new AddressDto();
-    addressDto1.setAddressType('c');
-    addressDto1.setStreet("132 Main Street");
-    addressDto1.setCity("Nagpur");
-    addressDto1.setState("Maharashtra");
-    addressDto1.setCountry("India");
-
-    AddressDto addressDto2 = new AddressDto();
-    addressDto2.setAddressType('p');
-    addressDto2.setStreet("142 Main Street");
-    addressDto2.setCity("Pune");
-    addressDto2.setState("Maharashtra");
-    addressDto2.setCountry("India");
-
-    AddressDto addressDto3 = new AddressDto();
-    addressDto3.setAddressType('o');
-    addressDto3.setStreet("1843 Main Street");
-    addressDto3.setCity("London");
-    addressDto3.setState("IL");
-    addressDto3.setCountry("USA");
-
-    List<AddressDto> addresses = new ArrayList<>();
-    addresses.add(addressDto1);
-    addresses.add(addressDto2);
-    addresses.add(addressDto3);
-
-    employeeDto.setAddress(addresses);
-
-        return ResponseEntity.ok(employeeDto);
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeServiceConstructor = employeeService;
     }
+    public void setEmployeeService(EmployeeService employeeService) {
+        this.employeeServiceSetter = employeeService;
+    }
+    @RequestMapping("/employee")
+    public ResponseEntity<Object> getEmployee() {
+
+        EmployeeService employeeServiceNormal = new EmployeeService();
+
+        System.out.println("Normal Employee Service: " + employeeServiceNormal.hashCode());
+        EmployeeDto employeeDto3 = employeeServiceNormal.getAllEmployees();
+
+        System.out.println("Setter Employee Service: " + employeeServiceSetter.hashCode());
+        EmployeeDto employeeDto1 = employeeServiceSetter.getAllEmployees();
+
+        System.out.println("Constructor Employee Service: " + employeeServiceConstructor.hashCode());
+        EmployeeDto employeeDto2 = employeeServiceConstructor.getAllEmployees();
+
+        return ResponseEntity.ok(employeeDto2);
+    }
+
 
 }
