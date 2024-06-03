@@ -1,37 +1,23 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.UserDto;
-import com.example.demo.service.impl.UserService;
+import com.example.demo.dto.UsersDto;
+import com.example.demo.service.UserServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-
-UserService userServiceConstructor=new UserService();
-UserService userServiceSetter=new UserService();
-
-    public UserController(UserService userServiceConstructor) {
-        this.userServiceConstructor = userServiceConstructor;
-    }
-
-    public void setUserServiceSetter(UserService userServiceSetter) {
-        this.userServiceSetter = userServiceSetter;
-    }
-
-    @RequestMapping("/v1/user/constructor")
-    public ResponseEntity<Object> getUserFromConstructor(){
-        UserDto userDto=userServiceConstructor.getAllUser();
-        System.out.println("Constructor Service : "+userServiceConstructor.hashCode());
+ @Autowired
+    UserServices userServices;
+    @RequestMapping("/v1/users")
+    public ResponseEntity<Object> getUser(){
+        UsersDto userDto=userServices.getAllUsers();
+        System.out.println("Constructor Service : "+userServices.hashCode());
         return ResponseEntity.ok(userDto);
     }
 
-    @RequestMapping("/v1/user/setter")
-    public ResponseEntity<Object> getUserFromSetter(){
 
-        UserDto userDto1=userServiceSetter.getAllUser();
-        System.out.println("Setter Service : "+userServiceSetter.hashCode());
-        return ResponseEntity.ok(userDto1);
-    }
 }

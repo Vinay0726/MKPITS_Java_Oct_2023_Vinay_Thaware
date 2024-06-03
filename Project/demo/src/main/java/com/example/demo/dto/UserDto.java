@@ -1,34 +1,17 @@
 package com.example.demo.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserDto {
-    private long id;
-    private  String username;
+
+    private Integer id;
+    private String username;
     private Integer age;
-
-    public UserDto() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 }
