@@ -1,16 +1,15 @@
 package com.example.demo.mysql.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -32,6 +31,8 @@ public class UserModel {
         @Column(name = "last_name")
         private String lastName;
 
+        @Column(name="dateofbirth")
+        private LocalDate dateOfBirth;
         @Column(name = "mobile")
         private String mobile;
 

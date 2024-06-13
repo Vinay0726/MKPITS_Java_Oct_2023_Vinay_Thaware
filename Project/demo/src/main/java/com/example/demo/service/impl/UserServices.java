@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 import com.example.demo.dto.request.UserRequestDto;
-import com.example.demo.dto.response.UserResponseDto;
+import com.example.demo.dto.response.UserPostResponseDto;
 import com.example.demo.mysql.model.UserCredential;
 import com.example.demo.mysql.model.UserModel;
 import com.example.demo.repository.UserCredentialRepository;
@@ -39,7 +39,7 @@ public class UserServices implements IUserServices {
 
     @Override
     @Transactional
-    public UserResponseDto createUser(UserRequestDto userRequestDto) {
+    public UserPostResponseDto createUser(UserRequestDto userRequestDto) {
 
         // Below code saves data in users table
         UserModel user = new UserModel();
@@ -63,13 +63,14 @@ public class UserServices implements IUserServices {
         userCredential.setCreatedAt(LocalDateTime.now());
         userCredential.setUpdatedBy(1);
         userCredential.setUpdatedAt(LocalDateTime.now());
+
         userCredentialRepository.save(userCredential);
 
-        UserResponseDto userResponseDto = new UserResponseDto();
-        userResponseDto.setId(user.getId());
-        userResponseDto.setFirstName(user.getFirstName());
-        userResponseDto.setUsername(userCredential.getUsername());
-        return userResponseDto;
+        UserPostResponseDto userPostResponseDto = new UserPostResponseDto();
+        userPostResponseDto.setId(user.getId());
+        userPostResponseDto.setFirstName(user.getFirstName());
+        userPostResponseDto.setUsername(userCredential.getUsername());
+        return userPostResponseDto;
     }
 
 
@@ -141,21 +142,36 @@ public class UserServices implements IUserServices {
     private UserModel convertUserDtoToUserModel(UserRequestDto userRequestDto,UserModel user) {
         user.setFirstName(userRequestDto.getFirstName());
         user.setLastName(userRequestDto.getLastName());
+        user.setDateOfBirth(userRequestDto.getDateOfBirth());
         user.setMobile(userRequestDto.getMobile());
         user.setEmail(userRequestDto.getEmail());
         user.setUpdatedBy(1);
         user.setUpdatedAt(LocalDateTime.now());
+//        user = UserModel.builder()
+//                .firstName(userRequestDto.getFirstName())
+//                .lastName(userRequestDto.getLastName())
+//                .mobile(userRequestDto.getMobile())
+//                .email(userRequestDto.getEmail())
+//                .updatedAt(LocalDateTime.now())
+//                .updatedBy(1)
+//                .build();
         return user;
 
     }
 
     private UserRequestDto convertUserModelToUserDto(UserModel userModel) {
-        UserRequestDto userRequestDto = new UserRequestDto();
-        userRequestDto.setId(userModel.getId());
-        userRequestDto.setFirstName(userModel.getFirstName());
-        userRequestDto.setLastName(userModel.getLastName());
-        userRequestDto.setMobile(userModel.getMobile());
-        userRequestDto.setEmail(userModel.getEmail());
+//        UserRequestDto userRequestDto = new UserRequestDto();
+//        userRequestDto.setId(userModel.getId());
+//        userRequestDto.setFirstName(userModel.getFirstName());
+//        userRequestDto.setLastName(userModel.getLastName());
+//        userRequestDto.setMobile(userModel.getMobile());
+//        userRequestDto.setEmail(userModel.getEmail());
+        UserRequestDto userRequestDto=new UserRequestDto();
+        userRequestDto=UserRequestDto.builder().id(userModel.getId()).
+        firstName(userModel.getFirstName()).
+        lastName(userModel.getLastName()).
+        mobile(userModel.getMobile()).
+        email(userModel.getEmail()).build();
         return userRequestDto;
     }
 }

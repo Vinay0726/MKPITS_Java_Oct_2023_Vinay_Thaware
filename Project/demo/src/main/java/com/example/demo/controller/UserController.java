@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 import com.example.demo.dto.request.UserRequestDto;
-import com.example.demo.dto.response.UserResponseDto;
+import com.example.demo.dto.response.ErrorResponseDto;
+import com.example.demo.dto.response.UserPostResponseDto;
 import com.example.demo.service.IUserServices;
+import com.example.demo.validator.UserValidator;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,20 +18,28 @@ import java.util.List;
 public class UserController {
  @Autowired
  IUserServices userServices;
+    @Autowired
+    UserValidator userValidator;
+
 //    @RequestMapping(value="/v1/users/{id}",method= RequestMethod.GET)
     @GetMapping(path = "/v1/users/{id}")
     public ResponseEntity<Object> getUser(@PathVariable("id") Integer id) {
+
+
         UserRequestDto userRequestDto = userServices.getUserById(id);
+        boolean isNotFound = userValidator.validateId(userRequestDto.getId());
         return ResponseEntity.ok(userRequestDto);
 
     }
 //    @RequestMapping(value = "/v1/users/{id}", method = RequestMethod.PUT)
+    @CrossOrigin
     @PutMapping(path = "/v1/users/{id}")
     public ResponseEntity<Object> updateUser(@PathVariable("id") Integer id, @RequestBody UserRequestDto userRequestDto) {
         userRequestDto.setId(id);
         UserRequestDto userDtoReturn = userServices.updateUser(userRequestDto);
         return ResponseEntity.ok(userRequestDto);
     }
+    @CrossOrigin
     @DeleteMapping(path = "/v1/users/{id}")
     public ResponseEntity<Object> deleteUser(@PathVariable("id") Integer id) {
         UserRequestDto userRequestDto = userServices.deleteUserById(id);
@@ -50,6 +60,7 @@ public class UserController {
 
 
 //    @RequestMapping(value = "/v1/users", method = RequestMethod.GET)
+    @CrossOrigin
     @GetMapping(path = "/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getAllUsers() {
         List<UserRequestDto> userRequestDtoList = userServices.getAllUsers();
@@ -58,9 +69,18 @@ public class UserController {
     }
 
 //    @RequestMapping(value="/v1/users",method= RequestMethod.POST)
+    @CrossOrigin
 @PostMapping(path = "/v1/users")
 public ResponseEntity<Object> createUser(@Valid @RequestBody UserRequestDto userRequestDto) {
-    UserResponseDto userResponseDto = userServices.createUser(userRequestDto);
-    return ResponseEntity.created(URI.create("/v1/users/" + userResponseDto.getId())).body(userResponseDto);
+    boolean isValidAge = userValidator.validateAge(userRequestDto.getDateOfBirth());
+    if(!isValidAge) {
+        ErrorResponseDto errorResponseDto = ErrorResponseDto.builder()
+                .errorMessage("Age should be greater than 18 yrs")
+                .httStatusCode(HttpStatus.BAD_REQUEST.value())
+                .build();
+        return ResponseEntity.badRequest().body(errorResponseDto);
+    }
+    UserPostResponseDto userPostResponseDto = userServices.createUser(userRequestDto);
+    return ResponseEntity.created(URI.create("/v1/users/" + userPostResponseDto.getId())).body(userPostResponseDto);
 }
 }
