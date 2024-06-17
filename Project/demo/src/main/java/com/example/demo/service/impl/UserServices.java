@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 import com.example.demo.dto.request.UserRequestDto;
+import com.example.demo.dto.response.UserGetResponseDto;
 import com.example.demo.dto.response.UserPostResponseDto;
 import com.example.demo.mysql.model.UserCredential;
 import com.example.demo.mysql.model.UserModel;
@@ -28,14 +29,15 @@ public class UserServices implements IUserServices {
     UserCredentialRepository userCredentialRepository;
 
 
-    public UserRequestDto getUserById(Integer id) {
+    public UserGetResponseDto getUserById(Integer id) {
         Optional<UserModel> userModel = userRepository.findById(id);
-        UserRequestDto userRequestDto = new UserRequestDto();
+        UserGetResponseDto userGetResponseDto = new UserGetResponseDto();
         if(userModel.isPresent()) {
-            userRequestDto =  convertUserModelToUserDto(userModel.get());
+            userGetResponseDto =  convertUserModelToUserDtoGetResponse(userModel.get());
         }
-        return userRequestDto;
+        return userGetResponseDto;
     }
+
 
     @Override
     @Transactional
@@ -92,13 +94,13 @@ public class UserServices implements IUserServices {
 
 
     @Override
-    public List<UserRequestDto> getAllUsers() {
+    public List<UserGetResponseDto> getAllUsers() {
 
         List<UserModel> userList = (List<UserModel>) userRepository.findAll();
-        List<UserRequestDto> userRequestDtoList = new ArrayList<>();
+        List<UserGetResponseDto> userRequestDtoList = new ArrayList<>();
         for(UserModel user : userList){
-            UserRequestDto userRequestDto = convertUserModelToUserDto(user);
-            userRequestDtoList.add(userRequestDto);
+            UserGetResponseDto userGetResponseDto = convertUserModelToUserDtoGetResponse(user);
+            userRequestDtoList.add(userGetResponseDto);
         }
         return userRequestDtoList;
     }
@@ -174,4 +176,16 @@ public class UserServices implements IUserServices {
         email(userModel.getEmail()).build();
         return userRequestDto;
     }
+
+    //get user by id and get All users
+    private UserGetResponseDto convertUserModelToUserDtoGetResponse(UserModel userModel) {
+        UserGetResponseDto userGetResponseDto=new UserGetResponseDto();
+        userGetResponseDto=UserGetResponseDto.builder().id(userModel.getId()).
+                firstName(userModel.getFirstName()).
+                lastName(userModel.getLastName()).
+                mobile(userModel.getMobile()).
+                email(userModel.getEmail()).build();
+        return userGetResponseDto;
+    }
+
 }

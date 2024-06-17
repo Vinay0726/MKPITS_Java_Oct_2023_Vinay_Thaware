@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 import com.example.demo.dto.request.UserRequestDto;
 import com.example.demo.dto.response.ErrorResponseDto;
+import com.example.demo.dto.response.UserGetResponseDto;
 import com.example.demo.dto.response.UserPostResponseDto;
 import com.example.demo.service.IUserServices;
 import com.example.demo.validator.UserValidator;
@@ -22,13 +23,14 @@ public class UserController {
     UserValidator userValidator;
 
 //    @RequestMapping(value="/v1/users/{id}",method= RequestMethod.GET)
+    @CrossOrigin
     @GetMapping(path = "/v1/users/{id}")
     public ResponseEntity<Object> getUser(@PathVariable("id") Integer id) {
 
 
-        UserRequestDto userRequestDto = userServices.getUserById(id);
-        boolean isNotFound = userValidator.validateId(userRequestDto.getId());
-        return ResponseEntity.ok(userRequestDto);
+        UserGetResponseDto userGetResponseDto = userServices.getUserById(id);
+        boolean isNotFound = userValidator.validateId(userGetResponseDto.getId());
+        return ResponseEntity.ok(userGetResponseDto);
 
     }
 //    @RequestMapping(value = "/v1/users/{id}", method = RequestMethod.PUT)
@@ -51,6 +53,7 @@ public class UserController {
 
     }
 //    @RequestMapping(value = "/v1/users/{id}", method = RequestMethod.PATCH)
+    @CrossOrigin
     @PatchMapping(path = "/v1/users/{id}")
     public ResponseEntity<Object> updatePartialUser(@PathVariable("id") Integer id, @RequestBody UserRequestDto userRequestDto) {
         userRequestDto.setId(id);
@@ -63,8 +66,8 @@ public class UserController {
     @CrossOrigin
     @GetMapping(path = "/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getAllUsers() {
-        List<UserRequestDto> userRequestDtoList = userServices.getAllUsers();
-        return ResponseEntity.ok(userRequestDtoList);
+        List<UserGetResponseDto> userGetResponseDtoList = userServices.getAllUsers();
+        return ResponseEntity.ok(userGetResponseDtoList);
 
     }
 

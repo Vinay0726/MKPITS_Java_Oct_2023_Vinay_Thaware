@@ -27,7 +27,7 @@ public class CustomExceptionHandler {
         return ResponseEntity.badRequest().body(errorResponseDto);
     }
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<Object> handleBusinessException(NotFoundException ex) {
+    public ResponseEntity<Object> handleNotFoundException(NotFoundException ex) {
         ErrorResponseDto errorResponseDto = new ErrorResponseDto();
         errorResponseDto.setErrorMessage(ex.getMessage());
         errorResponseDto.setHttStatusCode(HttpStatus.NOT_FOUND.value());
