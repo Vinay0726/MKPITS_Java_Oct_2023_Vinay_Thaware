@@ -1,21 +1,15 @@
 package com.example.banking.dto.response;
 
-import jakarta.persistence.Column;
 import lombok.*;
-
-import java.util.List;
 
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class AccountsGetResponse {
-    private Integer userId;
-    private String accountNumber;
-    private String type;
+public class AccountsDto {
+    private Integer id;
+    private String accountType;
     private double rateOfInterest;
     private double balance;
-
 }

@@ -1,12 +1,10 @@
 package com.example.banking.service;
 
+import com.example.banking.dto.request.AccountPostRequest;
 import com.example.banking.dto.request.AccountsRequestDto;
 import com.example.banking.dto.request.TransferRequest;
 import com.example.banking.dto.request.UserRequestDto;
-import com.example.banking.dto.response.AccountsGetResponse;
-import com.example.banking.dto.response.TransferResponse;
-import com.example.banking.dto.response.UserGetResponseDto;
-import com.example.banking.dto.response.UserPostResponseDto;
+import com.example.banking.dto.response.*;
 
 import java.util.List;
 
@@ -26,7 +24,7 @@ public interface IUserServices {
 
 
     //accounts part
-   public AccountsGetResponse getAccountDetailsById(Integer userId);
+   public UserGetResponseDto getAccountDetailsById(Integer id);
 
    public List<AccountsGetResponse> getAllAccounts();
 
@@ -35,4 +33,8 @@ public interface IUserServices {
    public AccountsRequestDto updateAccounts(AccountsRequestDto accountsRequestDto);
 
    public TransferResponse amountTransfer(TransferRequest transferRequest,Integer id);
+
+   public AccountPostGetResponse createAccounts(AccountPostRequest accountPostRequest);
+
+
 }

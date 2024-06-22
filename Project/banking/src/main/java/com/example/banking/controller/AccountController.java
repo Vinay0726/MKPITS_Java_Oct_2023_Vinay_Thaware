@@ -1,9 +1,12 @@
 package com.example.banking.controller;
 
+import com.example.banking.dto.request.AccountPostRequest;
 import com.example.banking.dto.request.AccountsRequestDto;
 import com.example.banking.dto.request.TransferRequest;
-import com.example.banking.dto.response.AccountsGetResponse;
-import com.example.banking.dto.response.TransferResponse;
+import com.example.banking.dto.request.UserRequestDto;
+import com.example.banking.dto.response.*;
+import com.example.banking.exception.AccountLimitExceededException;
+import com.example.banking.model.Accounts;
 import com.example.banking.service.IUserServices;
 import com.example.banking.validator.UserValidator;
 import jakarta.validation.Valid;
@@ -14,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 @RestController
 public class AccountController {
@@ -23,11 +27,15 @@ public class AccountController {
     UserValidator userValidator;
 
     //get accounts  by id
-    @GetMapping(path = "/v1/accounts/{userId}")
-    public ResponseEntity<Object> getAccountDetails(@PathVariable("userId") Integer userId) {
-        AccountsGetResponse accountsGetResponse = userService.getAccountDetailsById(userId);
-        return ResponseEntity.ok(accountsGetResponse);
+    @GetMapping(path = "/v1/accounts/{id}")
+    public ResponseEntity<Object> getAccountDetails(@PathVariable("id") Integer id) {
+        UserGetResponseDto userGetResponseDto = userService.getAccountDetailsById(id);
+        return ResponseEntity.ok(userGetResponseDto);
     }
+
+
+
+
     //get all accounts
     @GetMapping(path = "/v1/accounts", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getAllAccountsData() {
@@ -52,6 +60,20 @@ public class AccountController {
         AccountsRequestDto accountsDtoReturn = userService.updateAccounts(accountsRequestDto);
         return ResponseEntity.ok(accountsDtoReturn);
     }
+
+
+    //post accounts details
+    @PostMapping(path = "/v1/accounts")
+    public ResponseEntity<Object> createAccounts(@Valid @RequestBody AccountPostRequest accountPostRequest) {
+
+        AccountPostGetResponse accountPostGetResponse = userService.createAccounts(accountPostRequest);
+        return ResponseEntity.created(URI.create("/v1/users/" + accountPostGetResponse.getUserId())).body(accountPostGetResponse);
+    }
+    @ExceptionHandler(AccountLimitExceededException.class)
+    public ResponseEntity<String> handleAccountLimitExceededException(AccountLimitExceededException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
 
     //post account amount transfer from one user id to another
     @PostMapping(path = "/v1/accounts/users/{id}")

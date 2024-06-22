@@ -1,13 +1,11 @@
 package com.example.banking.repository;
 
 import com.example.banking.model.Accounts;
+import com.example.banking.model.TransferAmount;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface AccountRepository extends CrudRepository<Accounts,Integer> {
-    Optional<Accounts> findByUserId(Integer userId);
-
+public interface TransferAmountRepository extends CrudRepository<TransferAmount,Integer> {
 
 }

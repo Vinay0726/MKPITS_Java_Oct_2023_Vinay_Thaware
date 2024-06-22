@@ -17,11 +17,17 @@ public class Accounts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "user_id")
+//    @Column(name = "user_id")
+//    private Integer userId;
+    @Column(name = "user_id", insertable = false, updatable = false)
     private Integer userId;
 
-    @Column(name = "name")
-    private String name;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = true)
+    private User user;
+
+    @Column(name = "account_number")
+    private String accountNumber;
 
     @Column(name = "type")
     private String type;
@@ -43,5 +49,14 @@ public class Accounts {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+    @PrePersist
+    @PreUpdate
+    private void setUserId() {
+        if (user != null) {
+            this.userId = user.getId();
+        }
+    }
+
 
 }
